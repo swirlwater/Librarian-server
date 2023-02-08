@@ -21,6 +21,12 @@ public class UserDetailServiceImpl implements UserDetailsService {
     @Autowired
     private UserMapper userMapper;
 
+    /**
+     * 查询登录用户信息
+     * @param username 用户名
+     * @return 登录用户实体
+     * @throws UsernameNotFoundException 用户名未发现
+     */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         //查询用户信息
@@ -32,6 +38,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
             //如果没有查询到用户就抛出异常
             throw new RuntimeException("用户名或密码错误");
         }
+        //封装用户权限 此处为null
         ArrayList<String> list = new ArrayList<>();
         return new LoginUser(user,list);
     }

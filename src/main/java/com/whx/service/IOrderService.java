@@ -2,6 +2,7 @@ package com.whx.service;
 
 import com.whx.pojo.Order;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.whx.utils.RespBean;
 
 /**
  * <p>
@@ -14,4 +15,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface IOrderService extends IService<Order> {
 
     void add(Order order);
+
+    RespBean queryByCondition(String username, String bookName, String author,Long current);
 }

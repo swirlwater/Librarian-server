@@ -31,10 +31,16 @@ public class Order implements Serializable {
     private Integer id;
 
     /**
+     * 用户名
+     */
+    @ApiModelProperty("用户名")
+    private String username;
+
+    /**
      * 订单名
      */
-    @ApiModelProperty("订单名")
-    private String orderName;
+    @ApiModelProperty("书名")
+    private String bookName;
 
     /**
      * 作者
@@ -71,6 +77,5 @@ public class Order implements Serializable {
      */
     @ApiModelProperty("订单状态")
     private String station;
-
 
 }

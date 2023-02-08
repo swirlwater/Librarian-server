@@ -1,13 +1,15 @@
 package com.whx.pojo;
 
-import java.time.LocalDate;
-import java.io.Serializable;
-
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -28,8 +30,20 @@ public class Borrow implements Serializable {
      * 主键id
      */
     @TableId
-    @ApiModelProperty("id")
+    @ApiModelProperty(value = "id")
     private Integer id;
+
+    /**
+     * 用户id
+     */
+    @ApiModelProperty("用户名")
+    private String username;
+
+    /**
+     * 书籍id
+     */
+    @ApiModelProperty("书名")
+    private String bookName;
 
     /**
      * 数量
@@ -38,28 +52,20 @@ public class Borrow implements Serializable {
     private String num;
 
     /**
-     * 用户id
-     */
-    @ApiModelProperty("用户id")
-    private String userId;
-
-    /**
-     * 书籍id
-     */
-    @ApiModelProperty("书籍id")
-    private String bookId;
-
-    /**
      * 借出时间
      */
-    @ApiModelProperty("借出时间")
-    private LocalDate lendTime;
+    @ApiModelProperty(value = "借出时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date lendTime;
 
     /**
      * 归还时间
      */
-    @ApiModelProperty("归还时间")
-    private LocalDate repaidTime;
+    @ApiModelProperty(value = "归还时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date repaidTime;
 
     /**
      * 借出状态

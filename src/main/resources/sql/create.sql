@@ -27,25 +27,28 @@ create table book(
 /*---------------创建borrow表---------------*/
 create table borrow(
     id int(11) not null auto_increment comment '主键',
+    username varchar(32) not null comment '用户名',
+    book_name varchar(32) not null comment '书名',
     num varchar(32) not null default 1 comment '数量',
-    user_id varchar(32) not null comment '用户id',
-    book_id varchar(32) not null comment '书籍id',
     lend_time date comment '借出时间',
     repaid_time date comment '归还时间',
-    station varchar(5) not null comment '状态 0借出 1归还',
-    primary key (id)
+    station varchar(5) not null comment '状态 0外借中 1已归还',
+    primary key (id),
+    foreign key (username) references user(username)
 );
 /*----------------创建order表--------------*/
 create table `order`(
     id int(11) not null auto_increment comment '主键',
-    order_name varchar(32) not null comment '订单名',
+    username varchar(32) not null comment '用户名',
+    book_name varchar(32) not null comment '书名',
     author varchar(32) not null comment '作者',
     num varchar(32) not null comment '数量',
     press varchar(32) not null comment '出版社',
     content varchar(128) comment '描述',
     launch_time varchar(32) not null comment '发起时间',
     station varchar(5) not null comment '订单状态 0未处理 1已处理',
-    primary key (id)
+    primary key (id),
+    foreign key (username) references user(username)
 );
 /*----------------创建role表-----------------*/
 create table role(
@@ -80,14 +83,4 @@ create table role_permission(
     unique key (role_id,power_id),
     foreign key (role_id) references role(id),
     foreign key (power_id) references permission(id)
-);
-/*----------------创建user_order----------------*/
-create table user_order(
-    id int(11) not null auto_increment comment '主键',
-    user_id int(11) not null comment '用户id',
-    order_id int(11) not null comment '订单id',
-    primary key (id),
-    unique key (user_id,order_id),
-    foreign key (user_id) references user(id),
-    foreign key (order_id) references `order`(id)
 );

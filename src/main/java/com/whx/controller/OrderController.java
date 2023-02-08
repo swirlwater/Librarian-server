@@ -32,7 +32,7 @@ public class OrderController {
 
     @PostMapping("/add")
     @ApiOperation("添加订单")
-    public RespBean add(Order order){
+    public RespBean add(@RequestBody Order order){
         orderService.add(order);
         return RespBean.success();
     }
@@ -46,24 +46,24 @@ public class OrderController {
 
     @PutMapping("/update")
     @ApiOperation("处理订单")
-    public RespBean update(Order order){
+    public RespBean update(@RequestBody Order order){
         orderService.updateById(order);
         return RespBean.success();
     }
 
     @GetMapping("/query")
     @ApiOperation("管理员查询订单")
-    public RespBean query(String username,String order_name,Integer current){
-        //return orderService.queryByCondition(username,order_name,author,current);
-        return null;
+    public RespBean query(String username,String bookName,String author,Long current){
+        return orderService.queryByCondition(username,bookName,author,current);
     }
 
     @GetMapping("/queryWithUser")
     @ApiOperation("用户查询订单")
-    public RespBean queryWithUser(String order_name,Integer current){
+    public RespBean queryWithUser(String bookName,String author,Long current){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
         String username = loginUser.getUsername();
+        orderService.queryByCondition(username,bookName,author,current);
         return null;
     }
 }

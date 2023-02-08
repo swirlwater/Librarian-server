@@ -50,7 +50,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         //对密码加密
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         User loginUser = userMapper.selectById(user.getId());
-        if (loginUser==null){
+        if (loginUser!=null){
             throw new RuntimeException("用户已存在");
         }
         userMapper.insert(user);

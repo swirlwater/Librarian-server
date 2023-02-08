@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2023-01-07
  */
 @RestController
-@RequestMapping("/whx/role-permission")
+@RequestMapping("/role-permission")
 public class RolePermissionController {
 
 }

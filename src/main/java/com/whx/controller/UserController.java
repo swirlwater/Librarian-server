@@ -4,6 +4,7 @@ package com.whx.controller;
 import com.whx.pojo.LoginUser;
 import com.whx.pojo.User;
 import com.whx.service.IUserService;
+import com.whx.utils.RedisCache;
 import com.whx.utils.RespBean;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -28,6 +29,9 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
+    @Autowired
+    private RedisCache redisCache;
+
     /**
      * 注册
      * @param user 用户
@@ -46,7 +50,7 @@ public class UserController {
      */
     @PostMapping(value = "/login")
     @ApiOperation("登录")
-    public RespBean login(User user){
+    public RespBean login(@RequestBody User user){
         return userService.login(user);
     }
 
@@ -77,6 +81,10 @@ public class UserController {
         user.setId(loginUser.getUser().getId());
         user.setUsername(loginUser.getUsername());
         user.setPassword(loginUser.getPassword());
+        //更新redis的user信息
+        loginUser.setUser(user);
+        redisCache.setCacheObject("login:"+user.getId(),loginUser);
+        //更新user数据库信息
         userService.updateById(user);
         return RespBean.success();
     }

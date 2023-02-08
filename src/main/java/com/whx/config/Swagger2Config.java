@@ -37,7 +37,7 @@ public class Swagger2Config {
         return new ApiInfoBuilder()
                 .title("图书馆管理系统")
                 .description("图书馆管理系统接口文档")
-                .contact(new Contact("wu","http://localhost:8081/doc.html","1978938887@qq.com"))
+                .contact(new Contact("wu","http://localhost:8080/doc.html","1978938887@qq.com"))
                 .version("1.0")
                 .build();
     }

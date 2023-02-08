@@ -27,48 +27,30 @@ public class BookController {
     @Autowired
     private IBookService bookService;
 
-    /**
-     * 添加图书
-     * @param book 图书信息
-     * @return 结果
-     */
     @PostMapping("/add")
     @ApiOperation("添加图书")
-    public RespBean add(Book book){
+    public RespBean add(@RequestBody Book book){
         bookService.add(book);
         return RespBean.success();
     }
 
-    /**
-     * 删除图书
-     * @return 结果
-     */
     @DeleteMapping("/delete")
     @ApiOperation("删除图书")
-    public RespBean delete(Integer[] ids){
+    public RespBean delete(@RequestParam("ids") Integer[] ids){
         bookService.removeByIds(Arrays.asList(ids));
         return RespBean.success();
     }
 
-    /**
-     * 修改图书信息
-     * @param book 图书实体
-     * @return 结果
-     */
     @PutMapping("/update")
     @ApiOperation("修改图书")
-    public RespBean update(Book book){
+    public RespBean update(@RequestBody Book book){
         bookService.updateById(book);
         return RespBean.success();
     }
 
-    /**
-     * 按条件查询图书信息
-     * @return 符合条件图书信息
-     */
     @GetMapping("/query")
     @ApiOperation("按条件查询图书")
-    public RespBean query(String bookName,String author,Long current){
-        return bookService.queryByCondition(bookName,author,current);
+    public RespBean query(String bookName,String author,Long currentPage){
+        return bookService.queryByCondition(bookName,author,currentPage);
     }
 }
