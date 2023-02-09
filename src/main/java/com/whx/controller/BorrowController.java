@@ -32,7 +32,12 @@ public class BorrowController {
 
     @PostMapping("/add")
     @ApiOperation("添加借阅")
-    public RespBean add(Borrow borrow){
+    public RespBean add(@RequestBody Borrow borrow){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        LoginUser loginUser = (LoginUser) authentication.getPrincipal();
+        String username = loginUser.getUsername();
+        borrow.setUsername(username);
+        borrow.setStation("借出");
         borrowService.add(borrow);
         return RespBean.success();
     }
@@ -46,16 +51,24 @@ public class BorrowController {
 
     @GetMapping("/query")
     @ApiOperation("管理员查看借阅")
-    public RespBean query(String username,String bookName,Integer current){
-        return borrowService.queryByCondition(username,bookName,current);
+    public RespBean query(String username,String bookName,String author,Integer current){
+        return borrowService.queryByCondition(username,bookName,author,current);
     }
 
     @GetMapping("/queryWithUser")
     @ApiOperation("用户查看借阅")
-    public RespBean queryWithUser(String bookName,Integer current){
+    public RespBean queryWithUser(String bookName,String author,Integer current){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
         String username = loginUser.getUsername();
-        return borrowService.queryByCondition(username,bookName,current);
+        return borrowService.queryByCondition(username,bookName,author,current);
+    }
+
+    @PutMapping("/repaid")
+    @ApiOperation("用户归还图书")
+    public RespBean repaid(@RequestBody Borrow borrow){
+        borrow.setStation("归还");
+        borrowService.updateById(borrow);
+        return RespBean.success();
     }
 }

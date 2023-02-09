@@ -29,9 +29,10 @@ create table borrow(
     id int(11) not null auto_increment comment '主键',
     username varchar(32) not null comment '用户名',
     book_name varchar(32) not null comment '书名',
+    author varchar(32) not null comment '作者',
     num varchar(32) not null default 1 comment '数量',
-    lend_time date comment '借出时间',
-    repaid_time date comment '归还时间',
+    lend_time datetime comment '借出时间',
+    repaid_time datetime comment '归还时间',
     station varchar(5) not null comment '状态 0外借中 1已归还',
     primary key (id),
     foreign key (username) references user(username)
@@ -45,7 +46,7 @@ create table `order`(
     num varchar(32) not null comment '数量',
     press varchar(32) not null comment '出版社',
     content varchar(128) comment '描述',
-    launch_time varchar(32) not null comment '发起时间',
+    launch_time datetime comment '发起时间',
     station varchar(5) not null comment '订单状态 0未处理 1已处理',
     primary key (id),
     foreign key (username) references user(username)

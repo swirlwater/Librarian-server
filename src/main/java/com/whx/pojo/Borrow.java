@@ -46,6 +46,12 @@ public class Borrow implements Serializable {
     private String bookName;
 
     /**
+     * 作者
+     */
+    @ApiModelProperty("作者")
+    private String author;
+
+    /**
      * 数量
      */
     @ApiModelProperty("数量")

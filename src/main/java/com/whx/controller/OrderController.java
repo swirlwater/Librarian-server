@@ -33,6 +33,11 @@ public class OrderController {
     @PostMapping("/add")
     @ApiOperation("添加订单")
     public RespBean add(@RequestBody Order order){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        LoginUser loginUser = (LoginUser) authentication.getPrincipal();
+        String username = loginUser.getUsername();
+        order.setUsername(username);
+        order.setStation("0");
         orderService.add(order);
         return RespBean.success();
     }
@@ -63,7 +68,6 @@ public class OrderController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
         String username = loginUser.getUsername();
-        orderService.queryByCondition(username,bookName,author,current);
-        return null;
+        return orderService.queryByCondition(username,bookName,author,current);
     }
 }

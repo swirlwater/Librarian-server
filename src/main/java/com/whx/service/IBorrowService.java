@@ -16,5 +16,5 @@ public interface IBorrowService extends IService<Borrow> {
 
     void add(Borrow borrow);
 
-    RespBean queryByCondition(String username, String bookName, Integer current);
+    RespBean queryByCondition(String username, String bookName,String author, Integer current);
 }

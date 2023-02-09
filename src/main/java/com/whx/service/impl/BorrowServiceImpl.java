@@ -10,6 +10,8 @@ import com.whx.utils.RespBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
+
 /**
  * <p>
  *  服务实现类
@@ -41,11 +43,15 @@ public class BorrowServiceImpl extends ServiceImpl<BorrowMapper, Borrow> impleme
      * @return 查询结果
      */
     @Override
-    public RespBean queryByCondition(String username, String bookName, Integer current) {
+    public RespBean queryByCondition(String username, String bookName, String author,Integer current) {
+        if (Objects.isNull(bookName)) bookName="";
+        if (Objects.isNull(author)) author="";
+        if (Objects.isNull(current)) current=1;
         //查询借阅
         QueryWrapper<Borrow> queryWrapper = new QueryWrapper<>();
         queryWrapper.like("username",username);
         queryWrapper.like("book_name",bookName);
+        queryWrapper.like("book_name",author);
         Page<Borrow> page = borrowMapper.selectPage(new Page<>(current,10),queryWrapper);
         return RespBean.success(page);
     }
