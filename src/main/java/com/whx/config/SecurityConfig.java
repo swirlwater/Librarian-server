@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -39,6 +40,9 @@ public class SecurityConfig {
     @Autowired
     private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
 
+    @Autowired
+    private AuthenticationEntryPoint authenticationEntryPoint;
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
@@ -65,6 +69,9 @@ public class SecurityConfig {
                 .and()
                 //把token校验过滤器添加到过滤器链中
                 .addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class)
+                //配置异常处理器
+                .exceptionHandling().authenticationEntryPoint(authenticationEntryPoint)
+                .and()
                 //允许跨域访问
                 .cors()
                 .and()

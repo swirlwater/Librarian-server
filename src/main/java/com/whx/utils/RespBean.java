@@ -24,6 +24,7 @@ public class RespBean {
      */
     private Object object;
 
+
     /**
      * 返回成功结果
      */
@@ -38,11 +39,11 @@ public class RespBean {
     /**
      * 返回失败结果
      */
-    public static RespBean error(){
-        return new RespBean(RespBeanEnum.ERROR.getCode(), RespBeanEnum.ERROR.getMessage(),null);
+    public static RespBean error(RespBeanEnum respBeanEnum){
+        return new RespBean(respBeanEnum.getCode(), respBeanEnum.getMessage(),null);
     }
 
-    public static RespBean error(Object obj){
-        return new RespBean(RespBeanEnum.ERROR.getCode(), RespBeanEnum.ERROR.getMessage(),obj);
+    public static RespBean error(RespBeanEnum respBeanEnum,Object obj){
+        return new RespBean(respBeanEnum.getCode(), respBeanEnum.getMessage(),obj);
     }
 }
