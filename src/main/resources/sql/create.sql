@@ -7,7 +7,7 @@ create table user(
     username varchar(32) not null comment '用户名',
     password varchar(64) not null comment '密码',
     email varchar(64) not null comment '邮箱',
-    nickname varchar(32) not null comment '昵称',
+    nickname varchar(32) comment '昵称',
     phone varchar(32) not null comment '电话',
     gender varchar(32) comment '性别',
     primary key (id),

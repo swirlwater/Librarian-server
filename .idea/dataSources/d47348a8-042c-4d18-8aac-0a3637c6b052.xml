@@ -1041,7 +1041,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
     <column id="300" parent="292" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>1619042306</AutoIncrement>
       <Comment>主键</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
@@ -1372,7 +1372,6 @@ power_id</ColNames>
     <column id="359" parent="298" name="nickname">
       <Comment>昵称</Comment>
       <DasType>varchar(32)|0s</DasType>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="360" parent="298" name="phone">

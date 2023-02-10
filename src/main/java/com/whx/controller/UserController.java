@@ -39,7 +39,7 @@ public class UserController {
      */
     @PostMapping("/register")
     @ApiOperation("注册")
-    public RespBean register(User user){
+    public RespBean register(@RequestBody User user){
         return userService.register(user);
     }
 
