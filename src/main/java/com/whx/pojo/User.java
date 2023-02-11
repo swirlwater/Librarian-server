@@ -3,10 +3,13 @@ package com.whx.pojo;
 import java.io.Serializable;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.whx.validator.IsMobile;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * <p>
@@ -58,6 +61,8 @@ public class User implements Serializable {
      * 电话
      */
     @ApiModelProperty("电话")
+    @IsMobile
+    @NotNull
     private String phone;
 
     /**

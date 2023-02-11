@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="authentication exception">
+    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="register">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/utils/ValidatorUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/validator/IsMobile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/validator/impl/IsMobileValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/utils/RespBeanEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/utils/RespBeanEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -70,6 +77,9 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;库&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.52068967&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;b3fffe64a853a26fc40957a64e5ca366&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -220,7 +230,11 @@
       <workItem from="1675945337050" duration="10741000" />
       <workItem from="1676011110052" duration="2825000" />
       <workItem from="1676014013053" duration="375000" />
-      <workItem from="1676027539235" duration="2474000" />
+      <workItem from="1676027539235" duration="10684000" />
+      <workItem from="1676112866989" duration="2684000" />
+      <workItem from="1676115575366" duration="287000" />
+      <workItem from="1676115893077" duration="58000" />
+      <workItem from="1676119352249" duration="6492000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1673619973334</created>
@@ -250,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676014304940</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="register">
+      <created>1676030247671</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676030247671</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +296,36 @@
             <State />
           </value>
         </entry>
+        <entry key="ea92cc25-b133-42a3-a029-458dfebc4f01">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:D:/JetBrains/IDEAProjects/Librarian/src/main/java/com/whx/filter" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="ea92cc25-b133-42a3-a029-458dfebc4f01" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
@@ -282,7 +333,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="reset" />
     <MESSAGE value="authentication exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="authentication exception" />
+    <MESSAGE value="register" />
+    <option name="LAST_COMMIT_MESSAGE" value="register" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

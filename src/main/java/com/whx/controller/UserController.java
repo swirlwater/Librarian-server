@@ -11,6 +11,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -39,7 +40,7 @@ public class UserController {
      */
     @PostMapping("/register")
     @ApiOperation("注册")
-    public RespBean register(@RequestBody User user){
+    public RespBean register(@RequestBody @Validated User user){
         return userService.register(user);
     }
 
