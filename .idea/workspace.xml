@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="register">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/utils/ValidatorUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/validator/IsMobile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/validator/impl/IsMobileValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" afterDir="false" />
+    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="validate phone">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/validator/IsEmail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/validator/impl/IsEmailValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/exception/handler/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/utils/RespBeanEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/utils/RespBeanEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/utils/ValidatorUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/utils/ValidatorUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/validator/impl/IsMobileValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/validator/impl/IsMobileValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +231,10 @@
       <workItem from="1676112866989" duration="2684000" />
       <workItem from="1676115575366" duration="287000" />
       <workItem from="1676115893077" duration="58000" />
-      <workItem from="1676119352249" duration="6492000" />
+      <workItem from="1676119352249" duration="7746000" />
+      <workItem from="1676168780411" duration="1417000" />
+      <workItem from="1676170229509" duration="1351000" />
+      <workItem from="1676173545720" duration="2381000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1673619973334</created>
@@ -271,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676030247671</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="validate phone">
+      <created>1676128736981</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676128736981</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +341,8 @@
     <MESSAGE value="reset" />
     <MESSAGE value="authentication exception" />
     <MESSAGE value="register" />
-    <option name="LAST_COMMIT_MESSAGE" value="register" />
+    <MESSAGE value="validate phone" />
+    <option name="LAST_COMMIT_MESSAGE" value="validate phone" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

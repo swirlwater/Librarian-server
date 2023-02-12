@@ -3,6 +3,7 @@ package com.whx.pojo;
 import java.io.Serializable;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.whx.validator.IsEmail;
 import com.whx.validator.IsMobile;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -49,6 +50,8 @@ public class User implements Serializable {
      * 邮箱
      */
     @ApiModelProperty("邮箱")
+    @NotNull
+    @IsEmail
     private String email;
 
     /**
@@ -61,8 +64,8 @@ public class User implements Serializable {
      * 电话
      */
     @ApiModelProperty("电话")
-    @IsMobile
     @NotNull
+    @IsMobile
     private String phone;
 
     /**

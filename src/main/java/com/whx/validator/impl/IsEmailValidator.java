@@ -1,27 +1,27 @@
 package com.whx.validator.impl;
 
 import com.whx.utils.ValidatorUtil;
-import com.whx.validator.IsMobile;
+import com.whx.validator.IsEmail;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 /**
- * 手机号码校验器
+ * 邮箱校验器
  */
-public class IsMobileValidator implements ConstraintValidator<IsMobile,String> {
+public class IsEmailValidator implements ConstraintValidator<IsEmail,String> {
 
     private boolean required=false;
 
     @Override
-    public void initialize(IsMobile constraintAnnotation) {
+    public void initialize(IsEmail constraintAnnotation) {
         required= constraintAnnotation.required();
     }
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext constraintValidatorContext) {
         if (required){
-            return ValidatorUtil.isMobile(value);
+            return ValidatorUtil.isEmail(value);
         }
         return true;
     }
