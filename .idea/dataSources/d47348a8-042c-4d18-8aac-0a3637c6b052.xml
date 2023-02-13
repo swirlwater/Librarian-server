@@ -1242,218 +1242,232 @@ author</ColNames>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="336" parent="295" name="power">
-      <Comment>权限名</Comment>
-      <DasType>varchar(32)|0s</DasType>
+    <column id="336" parent="295" name="url">
+      <Comment>url</Comment>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="337" parent="295" name="content">
-      <Comment>描述</Comment>
-      <DasType>varchar(128)|0s</DasType>
+    <column id="337" parent="295" name="name">
+      <Comment>权限名</Comment>
+      <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="338" parent="295" name="PRIMARY">
+    <column id="338" parent="295" name="content">
+      <Comment>描述</Comment>
+      <DasType>varchar(128)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="339" parent="295" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="339" parent="295" name="PRIMARY">
+    <key id="340" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="340" parent="296" name="id">
+    <column id="341" parent="296" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>主键</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="341" parent="296" name="role_name">
+    <column id="342" parent="296" name="name">
       <Comment>角色名</Comment>
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="342" parent="296" name="content">
+    <column id="343" parent="296" name="content">
       <Comment>描述</Comment>
       <DasType>varchar(128)|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="343" parent="296" name="PRIMARY">
+    <index id="344" parent="296" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="344" parent="296" name="PRIMARY">
+    <index id="345" parent="296" name="name">
+      <ColNames>name</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="346" parent="296" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="345" parent="297" name="id">
+    <key id="347" parent="296" name="name">
+      <UnderlyingIndexName>name</UnderlyingIndexName>
+    </key>
+    <column id="348" parent="297" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>主键</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="346" parent="297" name="role_id">
+    <column id="349" parent="297" name="rid">
       <Comment>角色id</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="347" parent="297" name="power_id">
+    <column id="350" parent="297" name="pid">
       <Comment>权限id</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="348" parent="297" name="role_permission_ibfk_1">
-      <ColNames>role_id</ColNames>
+    <foreign-key id="351" parent="297" name="role_permission_ibfk_1">
+      <ColNames>rid</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>role</RefTableName>
     </foreign-key>
-    <foreign-key id="349" parent="297" name="role_permission_ibfk_2">
-      <ColNames>power_id</ColNames>
+    <foreign-key id="352" parent="297" name="role_permission_ibfk_2">
+      <ColNames>pid</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>permission</RefTableName>
     </foreign-key>
-    <index id="350" parent="297" name="PRIMARY">
+    <index id="353" parent="297" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="351" parent="297" name="role_id">
-      <ColNames>role_id
-power_id</ColNames>
+    <index id="354" parent="297" name="rid">
+      <ColNames>rid
+pid</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="352" parent="297" name="power_id">
-      <ColNames>power_id</ColNames>
+    <index id="355" parent="297" name="pid">
+      <ColNames>pid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="353" parent="297" name="PRIMARY">
+    <key id="356" parent="297" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="354" parent="297" name="role_id">
-      <UnderlyingIndexName>role_id</UnderlyingIndexName>
+    <key id="357" parent="297" name="rid">
+      <UnderlyingIndexName>rid</UnderlyingIndexName>
     </key>
-    <column id="355" parent="298" name="id">
-      <AutoIncrement>2</AutoIncrement>
+    <column id="358" parent="298" name="id">
+      <AutoIncrement>10</AutoIncrement>
       <Comment>主键</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="356" parent="298" name="username">
+    <column id="359" parent="298" name="username">
       <Comment>用户名</Comment>
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="357" parent="298" name="password">
+    <column id="360" parent="298" name="password">
       <Comment>密码</Comment>
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="358" parent="298" name="email">
+    <column id="361" parent="298" name="email">
       <Comment>邮箱</Comment>
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="359" parent="298" name="nickname">
+    <column id="362" parent="298" name="nickname">
       <Comment>昵称</Comment>
       <DasType>varchar(32)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="360" parent="298" name="phone">
+    <column id="363" parent="298" name="phone">
       <Comment>电话</Comment>
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="361" parent="298" name="gender">
+    <column id="364" parent="298" name="gender">
       <Comment>性别</Comment>
       <DasType>varchar(32)|0s</DasType>
       <Position>7</Position>
     </column>
-    <index id="362" parent="298" name="PRIMARY">
+    <index id="365" parent="298" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="363" parent="298" name="username">
+    <index id="366" parent="298" name="username">
       <ColNames>username</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="364" parent="298" name="PRIMARY">
+    <key id="367" parent="298" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="365" parent="298" name="username">
+    <key id="368" parent="298" name="username">
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>
-    <column id="366" parent="299" name="id">
+    <column id="369" parent="299" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>主键</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="367" parent="299" name="user_id">
+    <column id="370" parent="299" name="uid">
       <Comment>用户id</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="368" parent="299" name="role_id">
+    <column id="371" parent="299" name="rid">
       <Comment>角色id</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="369" parent="299" name="user_role_ibfk_1">
-      <ColNames>user_id</ColNames>
+    <foreign-key id="372" parent="299" name="user_role_ibfk_1">
+      <ColNames>uid</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <foreign-key id="370" parent="299" name="user_role_ibfk_2">
-      <ColNames>role_id</ColNames>
+    <foreign-key id="373" parent="299" name="user_role_ibfk_2">
+      <ColNames>rid</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>role</RefTableName>
     </foreign-key>
-    <index id="371" parent="299" name="PRIMARY">
+    <index id="374" parent="299" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="372" parent="299" name="user_id">
-      <ColNames>user_id
-role_id</ColNames>
+    <index id="375" parent="299" name="uid">
+      <ColNames>uid
+rid</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="373" parent="299" name="role_id">
-      <ColNames>role_id</ColNames>
+    <index id="376" parent="299" name="rid">
+      <ColNames>rid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="374" parent="299" name="PRIMARY">
+    <key id="377" parent="299" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="375" parent="299" name="user_id">
-      <UnderlyingIndexName>user_id</UnderlyingIndexName>
+    <key id="378" parent="299" name="uid">
+      <UnderlyingIndexName>uid</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

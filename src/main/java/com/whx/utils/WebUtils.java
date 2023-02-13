@@ -13,7 +13,7 @@ public class WebUtils {
      */
     public static void renderString(HttpServletResponse response, String string){
         try {
-            response.setStatus(401);
+            response.setStatus(500);
             response.setContentType("application/json");
             response.setCharacterEncoding("utf-8");
             response.getWriter().println(string);

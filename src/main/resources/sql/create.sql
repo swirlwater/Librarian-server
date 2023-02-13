@@ -54,34 +54,36 @@ create table `order`(
 /*----------------创建role表-----------------*/
 create table role(
     id int(11) not null auto_increment comment '主键',
-    role_name varchar(32) not null comment '角色名',
+    name varchar(32) not null comment '角色名',
     content varchar(128) comment '描述',
-    primary key (id)
+    primary key (id),
+    unique key (name)
 );
 /*-----------------创建permission表------------*/
 create table permission(
   id int(11) not null auto_increment comment '主键',
-  power  varchar(32) not null comment '权限名',
+  url varchar(64) not null comment 'url',
+  name  varchar(32) not null comment '权限名',
   content varchar(128) not null comment '描述',
   primary key (id)
 );
 /*------------------创建user_role表---------------*/
 create table user_role(
     id int(11) not null auto_increment comment '主键',
-    user_id int(11) not null comment '用户id',
-    role_id int(11) not null comment '角色id',
+    uid int(11) not null comment '用户id',
+    rid int(11) not null comment '角色id',
     primary key (id),
-    unique key (user_id,role_id),
-    foreign key (user_id) references user(id),
-    foreign key (role_id) references role(id)
+    unique key (uid,rid),
+    foreign key (uid) references user(id),
+    foreign key (rid) references role(id)
 );
 /*----------------创建role_permission------------*/
 create table role_permission(
     id int(11) not null auto_increment comment '主键',
-    role_id int(11) not null comment '角色id',
-    power_id int(11) not null comment '权限id',
+    rid int(11) not null comment '角色id',
+    pid int(11) not null comment '权限id',
     primary key (id),
-    unique key (role_id,power_id),
-    foreign key (role_id) references role(id),
-    foreign key (power_id) references permission(id)
+    unique key (rid,pid),
+    foreign key (rid) references role(id),
+    foreign key (pid) references permission(id)
 );

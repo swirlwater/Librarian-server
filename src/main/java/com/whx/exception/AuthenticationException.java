@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 授权异常处理
+ * 认证异常处理
  */
 @Component
 public class AuthenticationException implements AuthenticationEntryPoint {

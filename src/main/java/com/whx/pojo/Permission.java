@@ -30,11 +30,14 @@ public class Permission implements Serializable {
     @ApiModelProperty("权限id")
     private Integer id;
 
+    @ApiModelProperty("url")
+    private String url;
+
     /**
      * 权限名
      */
     @ApiModelProperty("权限名")
-    private String power;
+    private String name;
 
     /**
      * 描述

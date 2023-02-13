@@ -34,13 +34,13 @@ public class UserRole implements Serializable {
      * 用户id
      */
     @ApiModelProperty("用户id")
-    private Integer userId;
+    private Integer uid;
 
     /**
      * 角色id
      */
     @ApiModelProperty("角色id")
-    private Integer roleId;
+    private Integer rid;
 
 
 }

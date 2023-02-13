@@ -50,6 +50,7 @@ public class LoginUser implements Serializable, UserDetails {
      */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        //把permissions中String类型的权限信息封装成SimpleGrantedAuthority对象
         if (authorities!=null){
             return authorities;
         }

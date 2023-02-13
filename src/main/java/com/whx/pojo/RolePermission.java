@@ -34,13 +34,13 @@ public class RolePermission implements Serializable {
      * 角色id
      */
     @ApiModelProperty("角色id")
-    private Integer roleId;
+    private Integer rid;
 
     /**
      * 权限id
      */
     @ApiModelProperty("权限id")
-    private Integer powerId;
+    private Integer pid;
 
 
 }
