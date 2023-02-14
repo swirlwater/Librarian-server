@@ -1,10 +1,14 @@
 package com.whx.service.impl;
 
-import com.whx.pojo.LoginUser;
-import com.whx.pojo.User;
-import com.whx.mapper.UserMapper;
-import com.whx.service.IUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.whx.mapper.RoleMapper;
+import com.whx.mapper.UserMapper;
+import com.whx.mapper.UserRoleMapper;
+import com.whx.pojo.LoginUser;
+import com.whx.pojo.Role;
+import com.whx.pojo.User;
+import com.whx.pojo.UserRole;
+import com.whx.service.IUserService;
 import com.whx.utils.JwtUtil;
 import com.whx.utils.RedisCache;
 import com.whx.utils.RespBean;
@@ -20,7 +24,7 @@ import java.util.HashMap;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author wu
@@ -33,7 +37,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     private UserMapper userMapper;
 
     @Autowired
-    AuthenticationManager authenticationManager;
+    private AuthenticationManager authenticationManager;
 
     @Autowired
     private RedisCache redisCache;
@@ -41,8 +45,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private UserRoleMapper userRoleMapper;
+
+    @Autowired
+    private RoleMapper roleMapper;
+
     /**
      * 用户注册
+     *
      * @param user 用户
      */
     @Override
@@ -50,7 +61,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         //对密码加密
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         User loginUser = userMapper.selectById(user.getId());
-        if (loginUser!=null){
+        if (loginUser != null) {
             throw new RuntimeException("用户已存在");
         }
         userMapper.insert(user);
@@ -59,6 +70,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
     /**
      * 登录
+     *
      * @param user 登录用户
      * @return 登录结果及token
      */
@@ -68,7 +80,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword());
         Authentication authenticate = authenticationManager.authenticate(authenticationToken);
         //认证没通过，就给出相应的提示
-        if (authenticate==null){
+        if (authenticate == null) {
             throw new RuntimeException("登录失败");
         }
         //如果认证通过，使用userid生成一个jwt，并将jwt存入redis并返回
@@ -76,13 +88,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         String userid = loginUser.getUser().getId().toString();
         String jwt = JwtUtil.createJWT(userid);
         HashMap<String, String> map = new HashMap<>();
-        map.put("token",jwt);
-        redisCache.setCacheObject("login:"+userid,loginUser);
+        map.put("token", jwt);
+        redisCache.setCacheObject("login:" + userid, loginUser);
         return RespBean.success(map);
     }
 
     /**
      * 注销
+     *
      * @return 注销结果
      */
     @Override
@@ -91,8 +104,30 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
         Integer userid = loginUser.getUser().getId();
         //删除redis中的值
-        redisCache.deleteObject("login:"+userid);
+        redisCache.deleteObject("login:" + userid);
         return RespBean.success();
+    }
+
+    /**
+     * 通过用户id更新角色
+     *
+     * @param id    用户id
+     * @param roles 角色名数组
+     */
+    @Override
+    public void updateRoleById(Integer id, String[] roles) {
+        //通过用户id删除用户角色关系
+        userRoleMapper.deleteByUserId(id);
+        //插入用户角色关系表
+        for (String role : roles) {
+            //根据角色名查询角色id
+            Role ro=roleMapper.getRoleByEqualName(role);
+            //封装关系并插入表
+            UserRole userRole = new UserRole();
+            userRole.setUid(id);
+            userRole.setRid(ro.getId());
+            userRoleMapper.insert(userRole);
+        }
     }
 
 }

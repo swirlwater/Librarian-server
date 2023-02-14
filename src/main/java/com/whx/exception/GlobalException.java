@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+/**
+ * 全局异常类
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

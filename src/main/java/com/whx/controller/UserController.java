@@ -74,7 +74,7 @@ public class UserController {
      */
     @PutMapping("/update")
     @ApiOperation("更新用户信息")
-    public RespBean update(User user){
+    public RespBean update(@RequestBody User user){
         //从security中获取用户信息
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
@@ -87,6 +87,25 @@ public class UserController {
         redisCache.setCacheObject("login:"+user.getId(),loginUser);
         //更新user数据库信息
         userService.updateById(user);
+        return RespBean.success();
+    }
+
+    /**
+     * 修改用户职位
+     * @param id 用户id
+     * @param roles 角色名数组
+     * @return 结果
+     */
+    @PostMapping("/updateRole")
+    @ApiOperation("修改用户职位")
+    public RespBean updateRole(Integer id,String[] roles){
+        userService.updateRoleById(id,roles);
+        return RespBean.success();
+    }
+
+    @GetMapping("/queryUser")
+    @ApiOperation("查询用户及角色")
+    public RespBean queryUser(){
         return RespBean.success();
     }
 

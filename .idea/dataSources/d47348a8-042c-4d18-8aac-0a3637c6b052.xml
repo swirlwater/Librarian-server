@@ -1236,7 +1236,7 @@ author</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="335" parent="295" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>10</AutoIncrement>
       <Comment>主键</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>

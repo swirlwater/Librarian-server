@@ -2,4 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.whx.mapper.RoleMapper">
 
+    <!--通过用户名模糊查询-->
+    <select id="getRoleByLikeName" resultType="com.whx.pojo.Role">
+        select * from role where name like concat('%',#{name},'%');
+    </select>
+
+    <select id="getRoleByEqualName" resultType="com.whx.pojo.Role">
+        select * from role where name=#{name};
+    </select>
 </mapper>

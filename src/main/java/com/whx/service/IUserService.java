@@ -32,4 +32,6 @@ public interface IUserService extends IService<User> {
      * @return 结果
      */
     RespBean logout();
+
+    void updateRoleById(Integer id, String[] roles);
 }

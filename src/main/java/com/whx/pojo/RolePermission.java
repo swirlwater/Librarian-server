@@ -42,5 +42,4 @@ public class RolePermission implements Serializable {
     @ApiModelProperty("权限id")
     private Integer pid;
 
-
 }
