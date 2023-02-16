@@ -96,17 +96,17 @@ public class UserController {
      * @param roles 角色名数组
      * @return 结果
      */
-    @PostMapping("/updateRole")
+    @PutMapping("/updateRole")
     @ApiOperation("修改用户角色")
-    public RespBean updateRole(Integer id,@RequestParam("roles")String[] roles){
+    public RespBean updateRole(@RequestParam("id") Integer id,@RequestParam("roles")String[] roles){
         userService.updateRoleById(id,roles);
         return RespBean.success();
     }
 
     @GetMapping("/queryAll")
     @ApiOperation("查询所有用户及其所属角色")
-    public RespBean queryUser(String username){
-        return userService.queryAll(username);
+    public RespBean queryUser(String username,Integer currentPage){
+        return userService.queryAll(username,currentPage);
     }
 
     /**

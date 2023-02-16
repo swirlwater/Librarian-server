@@ -1,5 +1,6 @@
 package com.whx.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -11,6 +12,13 @@ import java.util.List;
 @NoArgsConstructor
 @ApiModel("用户角色实体")
 public class UserRoleVo {
+
+    /**
+     * 主键id
+     */
+    @TableId
+    @ApiModelProperty("用户id")
+    private Integer id;
 
     /**
      * 用户名

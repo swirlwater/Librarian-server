@@ -39,20 +39,19 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IR
 
     /**
      * 添加角色
-     *
      */
     @Override
     public void add(Role role, String[] permissions) {
         //添加角色
         roleMapper.insert(role);
         QueryWrapper<Role> roleQueryWrapper = new QueryWrapper<>();
-        roleQueryWrapper.eq("name",role.getName());
+        roleQueryWrapper.eq("name", role.getName());
         Role role1 = roleMapper.selectOne(roleQueryWrapper);
         //添加关系
-        insertRelated(role1,permissions);
+        insertRelated(role1, permissions);
     }
 
-    public void insertRelated(Role role,String[] permissions){
+    public void insertRelated(Role role, String[] permissions) {
         for (String permission : permissions) {
             //通过名称获取权限实体
             QueryWrapper<Permission> queryWrapper = new QueryWrapper<>();
@@ -84,7 +83,6 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IR
 
     /**
      * 修改角色
-     *
      */
     @Override
     public void updateRole(Role role, String[] permissions) {
@@ -93,7 +91,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IR
         //删除关系
         rolePermissionMapper.deleteByRoleId(role.getId());
         //添加关系
-        insertRelated(role,permissions);
+        insertRelated(role, permissions);
     }
 
     /**

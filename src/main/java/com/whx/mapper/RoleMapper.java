@@ -19,5 +19,5 @@ public interface RoleMapper extends BaseMapper<Role> {
 
     List<Role> getRoleByLikeName(String name);
 
-    Role getRoleByEqualName(String role);
+    Role getRoleByEqualName(String name);
 }

@@ -7,26 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="role permission">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/UserRoleVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" afterDir="false" />
+    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="roleManege">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/PermissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/RoleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/exception/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/exception/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/mapper/UserRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/mapper/UserRoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/RoleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/RolePermissionVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/IRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/IRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/mapper/RoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/UserRoleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/UserRoleVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/RoleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RolePermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RolePermissionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserRoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,6 +267,7 @@
       <workItem from="1676464439822" duration="8175000" />
       <workItem from="1676473571800" duration="3929000" />
       <workItem from="1676517688419" duration="910000" />
+      <workItem from="1676525058582" duration="7339000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1673619973334</created>
@@ -341,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676368817609</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="roleManege">
+      <created>1676525185159</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676525185159</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +406,8 @@
     <MESSAGE value="validate email" />
     <MESSAGE value="authority start" />
     <MESSAGE value="role permission" />
-    <option name="LAST_COMMIT_MESSAGE" value="role permission" />
+    <MESSAGE value="roleManege" />
+    <option name="LAST_COMMIT_MESSAGE" value="roleManege" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

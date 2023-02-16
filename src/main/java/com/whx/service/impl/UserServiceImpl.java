@@ -131,19 +131,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
     /**
      * 通过用户名查询用户角色实体
+     *
      * @param username 用户名
      * @return 结果
      */
     @Override
-    public RespBean queryAll(String username) {
-        List<UserRoleVo> userRoleVos=new ArrayList<>();
+    public RespBean queryAll(String username, Integer currentPage) {
+        if (username == null) username = "";
+        List<UserRoleVo> userRoleVos = new ArrayList<>();
         //通过用户名查询用户信息
         List<User> users = userMapper.queryByLikeUsername(username);
         for (User user : users) {
             //通过用户id查询角色名
-            List<String> roles=userRoleMapper.queryByUserId(user.getId());
+            List<String> roles = userRoleMapper.queryByUserId(user.getId());
             //封装用户角色实体
             UserRoleVo userRoleVo = new UserRoleVo();
+            userRoleVo.setId(user.getId());
             userRoleVo.setUsername(user.getUsername());
             userRoleVo.setRoles(roles);
             userRoleVos.add(userRoleVo);

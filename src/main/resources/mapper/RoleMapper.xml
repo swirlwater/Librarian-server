@@ -8,6 +8,6 @@
     </select>
 
     <select id="getRoleByEqualName" resultType="com.whx.pojo.Role">
-        select * from role where name=#{name};
+        select * from role where content=#{name};
     </select>
 </mapper>
