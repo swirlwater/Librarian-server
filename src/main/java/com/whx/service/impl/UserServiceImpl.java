@@ -4,10 +4,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.whx.mapper.RoleMapper;
 import com.whx.mapper.UserMapper;
 import com.whx.mapper.UserRoleMapper;
-import com.whx.pojo.LoginUser;
-import com.whx.pojo.Role;
-import com.whx.pojo.User;
-import com.whx.pojo.UserRole;
+import com.whx.pojo.*;
 import com.whx.service.IUserService;
 import com.whx.utils.JwtUtil;
 import com.whx.utils.RedisCache;
@@ -20,7 +17,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * <p>
@@ -121,7 +120,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         //插入用户角色关系表
         for (String role : roles) {
             //根据角色名查询角色id
-            Role ro=roleMapper.getRoleByEqualName(role);
+            Role ro = roleMapper.getRoleByEqualName(role);
             //封装关系并插入表
             UserRole userRole = new UserRole();
             userRole.setUid(id);
@@ -130,4 +129,25 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         }
     }
 
+    /**
+     * 通过用户名查询用户角色实体
+     * @param username 用户名
+     * @return 结果
+     */
+    @Override
+    public RespBean queryAll(String username) {
+        List<UserRoleVo> userRoleVos=new ArrayList<>();
+        //通过用户名查询用户信息
+        List<User> users = userMapper.queryByLikeUsername(username);
+        for (User user : users) {
+            //通过用户id查询角色名
+            List<String> roles=userRoleMapper.queryByUserId(user.getId());
+            //封装用户角色实体
+            UserRoleVo userRoleVo = new UserRoleVo();
+            userRoleVo.setUsername(user.getUsername());
+            userRoleVo.setRoles(roles);
+            userRoleVos.add(userRoleVo);
+        }
+        return RespBean.success(userRoleVos);
+    }
 }

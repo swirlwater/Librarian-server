@@ -6,4 +6,11 @@
     <delete id="deleteByUserId">
         delete from user_role where uid=#{id};
     </delete>
+
+    <!--通过用户id查询所有角色名-->
+    <select id="queryByUserId" resultType="java.lang.String">
+        select content
+        from role
+        where id in (select rid from user_role where uid = #{id})
+    </select>
 </mapper>

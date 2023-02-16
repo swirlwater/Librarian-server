@@ -62,7 +62,7 @@ create table role
     name    varchar(32) not null comment '角色名',
     content varchar(128) comment '描述',
     primary key (id),
-    unique key (name)
+    unique key(name)
 );
 /*-----------------创建permission表------------*/
 create table permission

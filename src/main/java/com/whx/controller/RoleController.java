@@ -1,15 +1,18 @@
 package com.whx.controller;
 
-import com.whx.pojo.RoleVo;
+import com.whx.pojo.Role;
 import com.whx.service.IRoleService;
 import com.whx.utils.RespBean;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author wu
@@ -24,28 +27,39 @@ public class RoleController {
 
     @PostMapping("/add")
     @ApiOperation("添加角色")
-    public RespBean add(@RequestBody RoleVo roleVo){
-        roleService.add(roleVo);
+    public RespBean add(Role role, @RequestParam("permissions") String[] permissions) {
+        roleService.add(role, permissions);
         return RespBean.success();
     }
 
     @DeleteMapping("/delete")
     @ApiOperation("删除角色")
-    public RespBean delete(@RequestParam("ids") Integer[] ids){
+    public RespBean delete(@RequestParam("ids") Integer[] ids) {
         roleService.delete(ids);
         return RespBean.success();
     }
 
     @PutMapping("/update")
     @ApiOperation("修改角色")
-    public RespBean update(@RequestBody RoleVo roleVo){
-        roleService.updateRole(roleVo);
+    public RespBean update(Role role, @RequestParam("permissions") String[] permissions) {
+        roleService.updateRole(role, permissions);
         return RespBean.success();
     }
 
     @GetMapping("/query")
     @ApiOperation("查询角色")
-    public RespBean query(String name,Integer currentPage){
-        return roleService.queryByName(name,currentPage);
+    public RespBean query(String name, Integer currentPage) {
+        return roleService.queryByName(name, currentPage);
+    }
+
+    @GetMapping("/queryAll")
+    @ApiOperation("查询所有角色")
+    public RespBean queryAll() {
+        List<Role> roles = roleService.list();
+        List<String> roleNames = new ArrayList<>();
+        for (Role role : roles) {
+            roleNames.add(role.getContent());
+        }
+        return RespBean.success(roleNames);
     }
 }

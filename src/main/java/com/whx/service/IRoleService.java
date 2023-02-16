@@ -2,7 +2,6 @@ package com.whx.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.whx.pojo.Role;
-import com.whx.pojo.RoleVo;
 import com.whx.utils.RespBean;
 
 /**
@@ -15,11 +14,11 @@ import com.whx.utils.RespBean;
  */
 public interface IRoleService extends IService<Role> {
 
-    void add(RoleVo roleVo);
+    void add(Role role, String[] permissions);
 
     void delete(Integer[] ids);
 
-    void updateRole(RoleVo roleVo);
+    void updateRole(Role role, String[] permissions);
 
     RespBean queryByName(String name,Integer currentPage);
 }

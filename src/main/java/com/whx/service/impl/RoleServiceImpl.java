@@ -8,7 +8,7 @@ import com.whx.mapper.RolePermissionMapper;
 import com.whx.pojo.Permission;
 import com.whx.pojo.Role;
 import com.whx.pojo.RolePermission;
-import com.whx.pojo.RoleVo;
+import com.whx.pojo.RolePermissionVo;
 import com.whx.service.IRoleService;
 import com.whx.utils.RespBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,25 +40,32 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IR
     /**
      * 添加角色
      *
-     * @param roleVo 角色权限实体
      */
     @Override
-    public void add(RoleVo roleVo) {
+    public void add(Role role, String[] permissions) {
         //添加角色
-        int rid = roleMapper.insert(roleVo.getRole());
+        roleMapper.insert(role);
+        QueryWrapper<Role> roleQueryWrapper = new QueryWrapper<>();
+        roleQueryWrapper.eq("name",role.getName());
+        Role role1 = roleMapper.selectOne(roleQueryWrapper);
         //添加关系
-        for (String permission : roleVo.getPermissions()) {
+        insertRelated(role1,permissions);
+    }
+
+    public void insertRelated(Role role,String[] permissions){
+        for (String permission : permissions) {
             //通过名称获取权限实体
             QueryWrapper<Permission> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("name", permission);
+            queryWrapper.eq("content", permission);
             Permission permissionEntity = permissionMapper.selectOne(queryWrapper);
             //将角色id和权限id插入关系表
             RolePermission rolePermission = new RolePermission();
-            rolePermission.setRid(rid);
+            rolePermission.setRid(role.getId());
             rolePermission.setPid(permissionEntity.getId());
             rolePermissionMapper.insert(rolePermission);
         }
     }
+
 
     /**
      * 删除角色
@@ -78,26 +85,15 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IR
     /**
      * 修改角色
      *
-     * @param roleVo 角色关系实体
      */
     @Override
-    public void updateRole(RoleVo roleVo) {
+    public void updateRole(Role role, String[] permissions) {
         //更新角色信息
-        roleMapper.updateById(roleVo.getRole());
+        roleMapper.updateById(role);
         //删除关系
-        rolePermissionMapper.deleteByRoleId(roleVo.getRole().getId());
+        rolePermissionMapper.deleteByRoleId(role.getId());
         //添加关系
-        for (String permission : roleVo.getPermissions()) {
-            //通过名称获取权限实体
-            QueryWrapper<Permission> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("name", permission);
-            Permission permissionEntity = permissionMapper.selectOne(queryWrapper);
-            //将角色id和权限id插入关系表
-            RolePermission rolePermission = new RolePermission();
-            rolePermission.setRid(roleVo.getRole().getId());
-            rolePermission.setPid(permissionEntity.getId());
-            rolePermissionMapper.insert(rolePermission);
-        }
+        insertRelated(role,permissions);
     }
 
     /**
@@ -108,18 +104,20 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IR
      */
     @Override
     public RespBean queryByName(String name, Integer currentPage) {
-        List<RoleVo> roleVos = new ArrayList<>();
+        List<RolePermissionVo> rolePermissionVos = new ArrayList<>();
         //通过角色名模糊查询角色
         List<Role> roles = roleMapper.getRoleByLikeName(name);
         for (Role role : roles) {
-            //通过角色id查询权限
+            //通过角色id查询权限名
             List<String> permissions = rolePermissionMapper.queryByRoleId(role.getId());
             //封装角色权限实体
-            RoleVo roleVo = new RoleVo();
-            roleVo.setRole(role);
-            roleVo.setPermissions(permissions);
-            roleVos.add(roleVo);
+            RolePermissionVo rolePermissionVo = new RolePermissionVo();
+            rolePermissionVo.setId(role.getId());
+            rolePermissionVo.setName(role.getName());
+            rolePermissionVo.setContent(role.getContent());
+            rolePermissionVo.setPermissions(permissions);
+            rolePermissionVos.add(rolePermissionVo);
         }
-        return RespBean.success(roleVos);
+        return RespBean.success(rolePermissionVos);
     }
 }

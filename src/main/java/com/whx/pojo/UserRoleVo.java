@@ -9,12 +9,16 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-@ApiModel("角色权限实体")
-public class RoleVo {
+@ApiModel("用户角色实体")
+public class UserRoleVo {
 
-    @ApiModelProperty("角色实体")
-    private Role role;
+    /**
+     * 用户名
+     */
+    @ApiModelProperty("用户名")
+    private String username;
 
-    @ApiModelProperty("权限")
-    private List<String> permissions;
+    @ApiModelProperty("角色")
+    List<String> roles;
 }
+

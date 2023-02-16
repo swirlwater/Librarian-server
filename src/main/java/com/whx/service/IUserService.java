@@ -34,4 +34,6 @@ public interface IUserService extends IService<User> {
     RespBean logout();
 
     void updateRoleById(Integer id, String[] roles);
+
+    RespBean queryAll(String username);
 }
