@@ -65,6 +65,7 @@ public class UserController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
         User user = loginUser.getUser();
+        user.setPassword(null);
         return RespBean.success(user);
     }
 
