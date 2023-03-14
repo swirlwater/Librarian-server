@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
- * 全局异常处理类
+ * 全局异常处理器
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -27,6 +27,7 @@ public class GlobalExceptionHandler {
         }else if(e instanceof AccessDeniedException){
             return RespBean.error(RespBeanEnum.AUTHORITY_ERROR);
         }
+        System.out.println(e);
         return RespBean.error(RespBeanEnum.ERROR);
     }
 }

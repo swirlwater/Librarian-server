@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 认证异常处理
+ * 认证处理器
  */
 @Component
-public class AuthenticationException implements AuthenticationEntryPoint {
+public class AuthenticationHandler implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, org.springframework.security.core.AuthenticationException authException) {
         RespBean respBean = RespBean.error(RespBeanEnum.AUTHENTICATION_ERROR);

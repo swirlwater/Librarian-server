@@ -1,8 +1,11 @@
 package com.whx.mapper;
 
-import com.whx.pojo.Borrow;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.whx.pojo.Borrow;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.Date;
 
 /**
  * <p>
@@ -15,4 +18,9 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface BorrowMapper extends BaseMapper<Borrow> {
 
+    void agreeLend(@Param("id") Integer id,@Param("date") Date date);
+
+    void requestRepaid(@Param("id") Integer id);
+
+    void agreeRepaid(@Param("id") Integer id,@Param("date") Date date);
 }

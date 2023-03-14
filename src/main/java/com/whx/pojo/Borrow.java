@@ -55,7 +55,7 @@ public class Borrow implements Serializable {
      * 数量
      */
     @ApiModelProperty("数量")
-    private String num;
+    private Integer num;
 
     /**
      * 借出时间
@@ -77,5 +77,5 @@ public class Borrow implements Serializable {
      * 借出状态
      */
     @ApiModelProperty("借出状态")
-    private String station;
+    private Integer station;
 }

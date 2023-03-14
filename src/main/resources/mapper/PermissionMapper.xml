@@ -2,4 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.whx.mapper.PermissionMapper">
 
+    <select id="queryPermissionByUserId" resultType="com.whx.pojo.Permission">
+        select distinct *
+        from permission
+        where id in (select pid from role_permission where rid in (select rid from user_role where uid =#{id}));
+    </select>
+
+    <select id="queryPermission" resultType="java.lang.String">
+        select distinct url
+        from permission
+        where id in (select pid from role_permission where rid in (select rid from user_role where uid = #{id}));
+    </select>
 </mapper>

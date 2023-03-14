@@ -55,7 +55,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IR
         for (String permission : permissions) {
             //通过名称获取权限实体
             QueryWrapper<Permission> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("content", permission);
+            queryWrapper.eq("name", permission);
             Permission permissionEntity = permissionMapper.selectOne(queryWrapper);
             //将角色id和权限id插入关系表
             RolePermission rolePermission = new RolePermission();

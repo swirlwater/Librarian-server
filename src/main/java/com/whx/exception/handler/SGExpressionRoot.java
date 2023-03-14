@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+/**
+ * 权限集
+ */
 @Component("ex")
 public class SGExpressionRoot {
 

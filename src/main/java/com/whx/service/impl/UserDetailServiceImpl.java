@@ -1,6 +1,7 @@
 package com.whx.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.whx.mapper.PermissionMapper;
 import com.whx.mapper.UserMapper;
 import com.whx.pojo.LoginUser;
 import com.whx.pojo.User;
@@ -10,7 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 用户信息业务实现类
@@ -20,6 +21,9 @@ public class UserDetailServiceImpl implements UserDetailsService {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private PermissionMapper permissionMapper;
 
     /**
      * 查询登录用户信息
@@ -38,8 +42,8 @@ public class UserDetailServiceImpl implements UserDetailsService {
             //如果没有查询到用户就抛出异常
             throw new RuntimeException("用户名或密码错误");
         }
-        //封装用户权限 此处为null
-        ArrayList<String> list = new ArrayList<>();
-        return new LoginUser(user,list);
+        //封装用户权限
+        List<String> permissions=permissionMapper.queryPermission(user.getId());
+        return new LoginUser(user,permissions);
     }
 }

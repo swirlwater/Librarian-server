@@ -36,4 +36,6 @@ public interface IUserService extends IService<User> {
     void updateRoleById(Integer id, String[] roles);
 
     RespBean queryAll(String username,Integer currentPage);
+
+    RespBean queryPermissions();
 }

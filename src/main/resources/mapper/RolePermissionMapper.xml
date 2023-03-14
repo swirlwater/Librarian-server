@@ -11,7 +11,7 @@
 
     <!--根据角色id查询权限集合-->
     <select id="queryByRoleId" resultType="java.lang.String">
-        select content
+        select name
         from permission
         where id in (select pid from role_permission where rid = #{id});
     </select>

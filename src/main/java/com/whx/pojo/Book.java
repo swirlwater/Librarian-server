@@ -47,7 +47,7 @@ public class Book implements Serializable {
      * 数量
      */
     @ApiModelProperty("数量")
-    private String num;
+    private Integer num;
 
     /**
      * 出版社

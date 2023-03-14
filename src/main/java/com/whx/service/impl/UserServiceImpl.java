@@ -1,6 +1,7 @@
 package com.whx.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.whx.mapper.PermissionMapper;
 import com.whx.mapper.RoleMapper;
 import com.whx.mapper.UserMapper;
 import com.whx.mapper.UserRoleMapper;
@@ -49,6 +50,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
     @Autowired
     private RoleMapper roleMapper;
+
+    @Autowired
+    private PermissionMapper permissionMapper;
 
     /**
      * 用户注册
@@ -152,5 +156,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             userRoleVos.add(userRoleVo);
         }
         return RespBean.success(userRoleVos);
+    }
+
+    @Override
+    public RespBean queryPermissions() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        LoginUser loginUser = (LoginUser) authentication.getPrincipal();
+        List<Permission> permissions=permissionMapper.queryPermissionByUserId(loginUser.getUser().getId());
+        return RespBean.success(permissions);
     }
 }

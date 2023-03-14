@@ -2,4 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.whx.mapper.BorrowMapper">
 
+    <update id="agreeLend">
+        update borrow
+        set station=1, lend_time=#{date}
+        where id = #{id};
+    </update>
+
+    <update id="requestRepaid">
+        update borrow
+        set station=2
+        where id = #{id};
+    </update>
+
+    <update id="agreeRepaid">
+        update borrow
+        set station=3,repaid_time=#{date}
+        where id = #{id};
+    </update>
 </mapper>

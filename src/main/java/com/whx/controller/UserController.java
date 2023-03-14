@@ -104,10 +104,26 @@ public class UserController {
         return RespBean.success();
     }
 
+    /**
+     * 管理员查询用户
+     * @param username 用户名
+     * @param currentPage 当前页
+     * @return 信息
+     */
     @GetMapping("/queryAll")
     @ApiOperation("查询所有用户及其所属角色")
     public RespBean queryUser(String username,Integer currentPage){
         return userService.queryAll(username,currentPage);
+    }
+
+    /**
+     * 查询用户拥有权限
+     * @return 权限详情列表
+     */
+    @GetMapping("/permissions")
+    @ApiOperation("查询用户拥有权限")
+    public RespBean queryPermissions(){
+        return userService.queryPermissions();
     }
 
     /**

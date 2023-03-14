@@ -35,7 +35,7 @@ public class PermissionController {
         List<String> permissionNames=new ArrayList<>();
         for (Permission permission :
                 permissions) {
-            permissionNames.add(permission.getContent());
+            permissionNames.add(permission.getName());
         }
         return RespBean.success(permissionNames);
     }
