@@ -17,3 +17,24 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher #swagger2配置 防止报错
+
+  mail:
+    host: smtp.qq.com #配置服务器qq:smtp.qq.com,网易163:smtp.163.com
+    username: 1978938887@qq.com #配置发件人
+    password: qaujjphydhozehif #配置授权码，邮箱->设置->账户->pop3/SMTP服务：开启后会获得授权码
+    default-encoding: UTF-8 #配置默认编码
+    properties: #一些其他配置
+      mail:
+        smtp:
+          ssl:
+            trust: mail.163.com
+          timeout: 10000
+          connection-timeout: 10000
+          write-timeout: 10000
+          auth: true
+          starttls:
+            enable: false
+            required: false
+          sockFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            port: 465

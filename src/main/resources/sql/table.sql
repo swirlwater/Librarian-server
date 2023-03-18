@@ -102,10 +102,12 @@ create table role_permission
 insert into permission
 values (1, '书籍搜索', 'sys:book:bookSearch', 'bookSearch', 'ios-paper'),
        (2, '借阅记录', 'sys:borrow:borrowSearch', 'borrowSearch', 'md-stats'),
-       (3, '借阅管理', 'sys:borrow:borrowManage', 'borrowManage', 'md-paper'),
-       (4, '书籍管理', 'sys:book:bookManage', 'bookManage', 'ios-book'),
-       (5, '用户管理', 'sys:user:userManage', 'userManage', 'md-people'),
-       (6, '角色管理', 'sys:user:roleManage', 'roleManage', 'ios-build');
+       (3, '添加订单', 'sys:borrow:orderAdd', 'orderAdd', 'md-cart'),
+       (4, '借阅管理', 'sys:borrow:borrowManage', 'borrowManage', 'md-paper'),
+       (5, '书籍管理', 'sys:book:bookManage', 'bookManage', 'ios-book'),
+       (6, '订单管理', 'sys:book:orderManage', 'orderManage', 'ios-cart'),
+       (7, '用户管理', 'sys:user:userManage', 'userManage', 'md-people'),
+       (8, '角色管理', 'sys:user:roleManage', 'roleManage', 'ios-build');
 /*----------------插入超级管理员---------------*/
 insert into user value (1, 'zhangsan', '$2a$10$qdNVeQ5hIVS45t8foOSIp.7pyP/8Lu9x1uY4uGHEzvPz63IIjOMme',
                         '1978938887@qq.com', 'mark', '15813555711', 'male');
@@ -117,7 +119,9 @@ values (1, 1, 1),
        (3,1,3),
        (4,1,4),
        (5,1,5),
-       (6,1,6);
+       (6,1,6),
+       (7,1,7),
+       (8,1,8);
 /*----------------通过角色id查询拥有的权限名----------------*/
 select name
 from permission
