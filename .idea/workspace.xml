@@ -7,12 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="permission-controller">
+    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="update borrow">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/BorrowController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,7 +315,10 @@
       <workItem from="1678930927359" duration="7110000" />
       <workItem from="1679028538072" duration="3203000" />
       <workItem from="1679109880031" duration="645000" />
-      <workItem from="1679150990817" duration="640000" />
+      <workItem from="1679150990817" duration="1026000" />
+      <workItem from="1679194842496" duration="1686000" />
+      <workItem from="1679212140419" duration="4289000" />
+      <workItem from="1679225046852" duration="2057000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1673619973334</created>
@@ -411,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678808223872</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="test post email">
+      <created>1679155742496</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1679155742496</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +489,9 @@
     <MESSAGE value="userManage" />
     <MESSAGE value="userSearch" />
     <MESSAGE value="permission-controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="permission-controller" />
+    <MESSAGE value="test post email" />
+    <MESSAGE value="update borrow" />
+    <option name="LAST_COMMIT_MESSAGE" value="update borrow" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -55,6 +55,13 @@ public class BorrowController {
         return RespBean.success();
     }
 
+    @PutMapping("/update")
+    @ApiOperation("修改借阅")
+    public RespBean update(@RequestBody Borrow borrow){
+        borrowService.updateById(borrow);
+        return RespBean.success();
+    }
+
     @GetMapping("/query")
     @ApiOperation("管理员查看借阅")
     public RespBean query(String username,String bookName,String author,Integer current){
