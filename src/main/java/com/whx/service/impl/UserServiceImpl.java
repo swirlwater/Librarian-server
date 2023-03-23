@@ -90,8 +90,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         LoginUser loginUser = (LoginUser) authenticate.getPrincipal();//返回查询到的用户信息
         String userid = loginUser.getUser().getId().toString();
         String jwt = JwtUtil.createJWT(userid);
-        HashMap<String, String> map = new HashMap<>();
+        HashMap<String, Object> map = new HashMap<>();
         map.put("token", jwt);
+        map.put("user",loginUser.getUser());
         redisCache.setCacheObject("login:" + userid, loginUser);
         return RespBean.success(map);
     }
