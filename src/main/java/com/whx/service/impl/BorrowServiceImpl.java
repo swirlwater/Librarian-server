@@ -47,6 +47,9 @@ public class BorrowServiceImpl extends ServiceImpl<BorrowMapper, Borrow> impleme
         //检查
         if (book==null) return RespBean.error(RespBeanEnum.BOOK_ERROR);
         if(book.getNum()<=0) return RespBean.error(RespBeanEnum.NUM_ERROR);
+        //减少库存
+        book.setNum(book.getNum()-1);
+        bookMapper.updateById(book);
         //封装借阅
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
