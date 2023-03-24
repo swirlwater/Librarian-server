@@ -1097,7 +1097,7 @@ author</ColNames>
       <UnderlyingIndexName>book_name</UnderlyingIndexName>
     </key>
     <column id="310" parent="293" name="id">
-      <AutoIncrement>1614934019</AutoIncrement>
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
@@ -1139,7 +1139,7 @@ author</ColNames>
       <Position>7</Position>
     </column>
     <column id="317" parent="293" name="station">
-      <Comment>状态 0申请 1借阅 2归还</Comment>
+      <Comment>状态 0申请借阅 1借阅中 2申请归还 3已归还</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
@@ -1164,7 +1164,7 @@ author</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="322" parent="294" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2051067906</AutoIncrement>
       <Comment>主键</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
@@ -1236,7 +1236,7 @@ author</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="335" parent="295" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>9</AutoIncrement>
       <Comment>主键</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
@@ -1313,7 +1313,7 @@ author</ColNames>
       <UnderlyingIndexName>name</UnderlyingIndexName>
     </key>
     <column id="349" parent="297" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>1136685060</AutoIncrement>
       <Comment>主键</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>

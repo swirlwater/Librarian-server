@@ -56,6 +56,7 @@ public class SecurityConfig {
                 //配置路径是否需要认证
                 .authorizeRequests()
                 .antMatchers("/user/login",
+                        "/user/captcha",
                         "/user/register",
                         "/user/logout",
                         "/css/**",

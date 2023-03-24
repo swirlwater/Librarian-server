@@ -1,4 +1,5 @@
 import com.whx.LibrarianApplication;
+import com.whx.utils.CaptchaUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,5 +41,11 @@ public class MyTest {
         mailMessage.setText("起床了");
         //发送邮件
         javaMailSender.send(mailMessage);
+    }
+
+    @Test
+    public void getCode(){
+        String code = CaptchaUtil.generatedCode(4);
+        System.out.println(code);
     }
 }

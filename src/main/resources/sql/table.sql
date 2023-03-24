@@ -36,9 +36,9 @@ create table borrow
     book_name   varchar(32) not null comment '书名',
     author      varchar(32) not null comment '作者',
     num         int(5)      not null default 1 comment '数量',
-    lend_time   datetime comment '借出时间',
-    repaid_time datetime comment '归还时间',
-    station     int(1)      not null comment '状态 0申请借阅 1借阅中 2申请归还 3已归还',
+    lend_time   datetime default null comment '借出时间',
+    repaid_time datetime default null comment '归还时间',
+    station     int(1) not null comment '状态 0申请借阅 1借阅中 2申请归还 3已归还',
     primary key (id),
     foreign key (username) references user (username)
 );

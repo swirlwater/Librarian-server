@@ -8,9 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="refresh user">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/config/RabbitMqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/rabbitmq/MqReceive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/rabbitmq/MqSend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/utils/CaptchaUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,49 +118,7 @@
       <recent name="com.whx.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.LibrarianApplication">
-    <configuration name="JwtUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.whx.utils.JwtUtil" />
-      <module name="Librarian" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.whx.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Librarian" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyTest.passwordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Librarian" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="passwordTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyTest.sendSimpleMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Librarian" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="sendSimpleMail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="LibrarianApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Librarian" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.whx.LibrarianApplication" />
@@ -169,10 +135,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.LibrarianApplication" />
-        <item itemvalue="JUnit.MyTest.sendSimpleMail" />
-        <item itemvalue="JUnit.MyTest" />
-        <item itemvalue="JUnit.MyTest.passwordTest" />
-        <item itemvalue="应用程序.JwtUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +287,9 @@
       <workItem from="1679487975472" duration="3006000" />
       <workItem from="1679537418762" duration="2929000" />
       <workItem from="1679557572962" duration="3772000" />
-      <workItem from="1679570995321" duration="336000" />
+      <workItem from="1679570995321" duration="9865000" />
+      <workItem from="1679623599047" duration="4606000" />
+      <workItem from="1679646239042" duration="1726000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1673619973334</created>
@@ -432,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679236555596</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="refresh user">
+      <created>1679571337855</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1679571337855</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

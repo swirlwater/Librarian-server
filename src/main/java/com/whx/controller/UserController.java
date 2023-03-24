@@ -3,9 +3,11 @@ package com.whx.controller;
 
 import com.whx.pojo.LoginUser;
 import com.whx.pojo.User;
+import com.whx.rabbitmq.MqSend;
 import com.whx.service.IUserService;
 import com.whx.utils.RedisCache;
 import com.whx.utils.RespBean;
+import com.whx.validator.IsEmail;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +34,17 @@ public class UserController {
 
     @Autowired
     private RedisCache redisCache;
+
+    @Autowired
+    private MqSend mqSend;
+
+    @GetMapping("/captcha")
+    @ApiOperation("获取验证码")
+    public RespBean captcha(@IsEmail String email){
+        //异步处理邮件发送
+        mqSend.sendEmail(email);
+        return RespBean.success();
+    }
 
     /**
      * 注册
