@@ -10,6 +10,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 @SpringBootTest(classes = LibrarianApplication.class)
 @RunWith(SpringRunner.class)
 public class MyTest {
@@ -47,5 +50,13 @@ public class MyTest {
     public void getCode(){
         String code = CaptchaUtil.generatedCode(4);
         System.out.println(code);
+    }
+
+    @Test
+    public void testEmail(){
+        Pattern email_pattern=Pattern.compile("[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+");
+        String email="1171043694@qq.com";
+        Matcher matcher = email_pattern.matcher(email);
+        System.out.println(matcher.matches());
     }
 }

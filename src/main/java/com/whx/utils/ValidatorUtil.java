@@ -9,7 +9,7 @@ public class ValidatorUtil {
 
     public static final Pattern mobile_pattern=Pattern.compile("^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\\d{8}$");
 
-    public static final Pattern email_pattern=Pattern.compile("^([A-z0-9]{6,18})([w\\-])+@[A-z0-9]+.([A-z]{2,3})$");
+    public static final Pattern email_pattern=Pattern.compile("[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+");
 
     public static boolean isMobile(String mobile){
         if (!StringUtils.hasLength(mobile)){

@@ -1,5 +1,6 @@
 package com.whx.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.whx.mapper.PermissionMapper;
 import com.whx.mapper.RoleMapper;
@@ -63,7 +64,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     public RespBean register(User user) {
         //对密码加密
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        User loginUser = userMapper.selectById(user.getId());
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("username",user.getUsername());
+        User loginUser = userMapper.selectOne(queryWrapper);
         if (loginUser != null) {
             throw new RuntimeException("用户已存在");
         }

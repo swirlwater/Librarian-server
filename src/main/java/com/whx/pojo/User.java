@@ -73,6 +73,4 @@ public class User implements Serializable {
      */
     @ApiModelProperty("性别")
     private String gender;
-
-
 }

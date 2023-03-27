@@ -2,11 +2,13 @@ package com.whx.controller;
 
 
 import com.whx.pojo.LoginUser;
+import com.whx.pojo.RegisterUser;
 import com.whx.pojo.User;
 import com.whx.rabbitmq.MqSend;
 import com.whx.service.IUserService;
 import com.whx.utils.RedisCache;
 import com.whx.utils.RespBean;
+import com.whx.utils.RespBeanEnum;
 import com.whx.validator.IsEmail;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -48,13 +50,21 @@ public class UserController {
 
     /**
      * 注册
-     * @param user 用户
+     * @param registerUser 注册用户实体
      * @return 结果
      */
     @PostMapping("/register")
     @ApiOperation("注册")
-    public RespBean register(@RequestBody @Validated User user){
-        return userService.register(user);
+    public RespBean register(@RequestBody @Validated RegisterUser registerUser) {
+        String captcha = registerUser.getCaptcha();
+        String code = redisCache.getCacheObject(registerUser.getUser().getEmail() + ":register");
+        if (code==null){
+            return RespBean.error(RespBeanEnum.CAPTCHA_OUT_ERROR);
+        }
+        if(!code.equals(captcha)){
+            return RespBean.error(RespBeanEnum.CAPTCHA_ERROR);
+        }
+        return userService.register(registerUser.getUser());
     }
 
     /**

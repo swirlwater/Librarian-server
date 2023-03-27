@@ -7,20 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="debug bookSearch">
+    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="update borrow and order operation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/RegisterUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/BorrowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/mapper/BorrowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/mapper/BorrowMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/mapper/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/IBorrowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/IBorrowService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/IOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/IOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/BorrowServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/BorrowServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BorrowMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BorrowMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/rabbitmq/MqReceive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/rabbitmq/MqReceive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/utils/RespBeanEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/utils/RespBeanEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/utils/ValidatorUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/utils/ValidatorUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +116,17 @@
       <recent name="com.whx.config" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.LibrarianApplication">
+    <configuration name="MyTest.testEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Librarian" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="METHOD_NAME" value="testEmail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LibrarianApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Librarian" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.whx.LibrarianApplication" />
@@ -137,6 +143,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.LibrarianApplication" />
+        <item itemvalue="JUnit.MyTest.testEmail" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +305,7 @@
       <workItem from="1679730428423" duration="1788000" />
       <workItem from="1679733939529" duration="2519000" />
       <workItem from="1679885887018" duration="1586000" />
-      <workItem from="1679902971232" duration="3324000" />
+      <workItem from="1679902971232" duration="12718000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1673619973334</created>
@@ -426,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679649317649</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update borrow and order operation">
+      <created>1679906918634</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1679906918634</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +516,8 @@
     <MESSAGE value="refresh user" />
     <MESSAGE value="email captcha" />
     <MESSAGE value="debug bookSearch" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug bookSearch" />
+    <MESSAGE value="update borrow and order operation" />
+    <option name="LAST_COMMIT_MESSAGE" value="update borrow and order operation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
