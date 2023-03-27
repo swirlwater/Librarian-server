@@ -70,7 +70,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         if (loginUser != null) {
             throw new RuntimeException("用户已存在");
         }
+        //注册用户
         userMapper.insert(user);
+        //赋予角色
+        User user1 = userMapper.selectOne(queryWrapper);
+        userRoleMapper.setRole(user1.getId());
         return RespBean.success();
     }
 

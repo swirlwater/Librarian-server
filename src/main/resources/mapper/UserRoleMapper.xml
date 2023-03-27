@@ -2,6 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.whx.mapper.UserRoleMapper">
 
+    <!--设置用户初始角色-->
+    <insert id="setRole">
+        insert into user_role value (null, #{id}, 2);
+    </insert>
+
     <!--通过用户id删除用户角色关系-->
     <delete id="deleteByUserId">
         delete from user_role where uid=#{id};
