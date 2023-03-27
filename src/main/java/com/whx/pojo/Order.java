@@ -78,6 +78,6 @@ public class Order implements Serializable {
      * 订单状态
      */
     @ApiModelProperty("订单状态")
-    private String station;
+    private Integer station;
 
 }

@@ -38,7 +38,7 @@ create table borrow
     num         int(5)      not null default 1 comment '数量',
     lend_time   datetime default null comment '借出时间',
     repaid_time datetime default null comment '归还时间',
-    station     int(1) not null comment '状态 0申请借阅 1借阅中 2申请归还 3已归还',
+    station     int(1) not null comment '状态 0申请借阅 1借阅中 2申请归还 3已归还 4撤销',
     primary key (id),
     foreign key (username) references user (username)
 );
@@ -53,7 +53,7 @@ create table `order`
     press       varchar(32) not null comment '出版社',
     content     varchar(128) comment '描述',
     launch_time datetime comment '发起时间',
-    station     int(1)      not null comment '订单状态 0未处理 1已处理',
+    station     int(1)      not null comment '订单状态 0未处理 1已处理 2撤销',
     primary key (id),
     foreign key (username) references user (username)
 );

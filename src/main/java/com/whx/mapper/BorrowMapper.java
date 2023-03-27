@@ -23,4 +23,8 @@ public interface BorrowMapper extends BaseMapper<Borrow> {
     void requestRepaid(@Param("id") Integer id);
 
     void agreeRepaid(@Param("id") Integer id,@Param("date") Date date);
+
+    void cancelLend(@Param("id") Integer id);
+
+    void cancelRepaid(@Param("id") Integer id);
 }

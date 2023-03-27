@@ -37,7 +37,7 @@ public class OrderController {
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
         String username = loginUser.getUsername();
         order.setUsername(username);
-        order.setStation("0");
+        order.setStation(0);
         orderService.add(order);
         return RespBean.success();
     }
@@ -69,5 +69,17 @@ public class OrderController {
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
         String username = loginUser.getUsername();
         return orderService.queryByCondition(username,bookName,author,current);
+    }
+
+    @GetMapping("/agree")
+    @ApiOperation("同意订单申请")
+    public RespBean agree(Integer id){
+        return orderService.agree(id);
+    }
+
+    @GetMapping("/cancel")
+    @ApiOperation("撤销")
+    public RespBean cancel(Integer id){
+        return orderService.cancel(id);
     }
 }

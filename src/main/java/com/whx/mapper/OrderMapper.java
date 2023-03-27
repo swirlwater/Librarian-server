@@ -3,6 +3,7 @@ package com.whx.mapper;
 import com.whx.pojo.Order;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
@@ -15,4 +16,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface OrderMapper extends BaseMapper<Order> {
 
+    void agree(@Param("id") Integer id);
+
+    void cancel(@Param("id") Integer id);
 }

@@ -54,4 +54,26 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         Page<Order> orderPage = orderMapper.selectPage(new Page<>(current, 10), queryWrapper);
         return RespBean.success(orderPage);
     }
+
+    /**
+     * 通过订单操作
+     * @param id 订单id
+     * @return 信息
+     */
+    @Override
+    public RespBean agree(Integer id) {
+        orderMapper.agree(id);
+        return RespBean.success();
+    }
+
+    /**
+     * 取消订单操作
+     * @param id 订单id
+     * @return 信息
+     */
+    @Override
+    public RespBean cancel(Integer id) {
+        orderMapper.cancel(id);
+        return RespBean.success();
+    }
 }

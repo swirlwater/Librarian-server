@@ -20,9 +20,9 @@ public interface IBorrowService extends IService<Borrow> {
 
     RespBean add(Borrow borrow);
 
-    RespBean agreeLend(Integer id);
-
     RespBean requestRepaid(Integer id);
 
-    RespBean agreeRepaid(Integer id);
+    RespBean cancel(Integer id);
+
+    RespBean agree(Integer id, Integer station);
 }

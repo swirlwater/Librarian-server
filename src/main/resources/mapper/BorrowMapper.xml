@@ -4,7 +4,8 @@
 
     <update id="agreeLend">
         update borrow
-        set station=1, lend_time=#{date}
+        set station=1,
+            lend_time=#{date}
         where id = #{id};
     </update>
 
@@ -16,7 +17,20 @@
 
     <update id="agreeRepaid">
         update borrow
-        set station=3,repaid_time=#{date}
+        set station=3,
+            repaid_time=#{date}
         where id = #{id};
     </update>
+
+    <delete id="cancelLend">
+        update borrow
+        set station=4
+        where id = #{id};
+    </delete>
+
+    <delete id="cancelRepaid">
+        update borrow
+        set station=1
+        where id = #{id};
+    </delete>
 </mapper>

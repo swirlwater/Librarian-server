@@ -42,12 +42,6 @@ public class BorrowController {
         return borrowService.add(borrow);
     }
 
-    @GetMapping("/agreeLend")
-    @ApiOperation("管理员同意借阅")
-    public RespBean agreeLend(Integer id){
-        return borrowService.agreeLend(id);
-    }
-
     @DeleteMapping("/delete")
     @ApiOperation("删除借阅")
     public RespBean delete(@RequestParam("ids") Integer[] ids){
@@ -83,9 +77,15 @@ public class BorrowController {
         return borrowService.requestRepaid(id);
     }
 
-    @GetMapping("/agreeRepaid")
-    @ApiOperation("管理员同意归还图书")
-    public RespBean agreeRepaid(Integer id){
-        return borrowService.agreeRepaid(id);
+    @GetMapping("/cancel")
+    @ApiOperation("用户撤销操作")
+    public RespBean cancel(Integer id){
+        return borrowService.cancel(id);
+    }
+
+    @GetMapping("/agree")
+    @ApiOperation("管理员同意操作")
+    public RespBean agree(Integer id,Integer station){
+        return borrowService.agree(id,station);
     }
 }
