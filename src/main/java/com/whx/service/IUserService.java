@@ -38,4 +38,6 @@ public interface IUserService extends IService<User> {
     RespBean queryAll(String username,Integer currentPage);
 
     RespBean queryPermissions();
+
+    RespBean updatePassword(String username, String lastPassword, String newPassword);
 }

@@ -11,6 +11,7 @@ import com.whx.service.IUserService;
 import com.whx.utils.JwtUtil;
 import com.whx.utils.RedisCache;
 import com.whx.utils.RespBean;
+import com.whx.utils.RespBeanEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -68,7 +69,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         queryWrapper.eq("username",user.getUsername());
         User loginUser = userMapper.selectOne(queryWrapper);
         if (loginUser != null) {
-            throw new RuntimeException("用户已存在");
+            return RespBean.error(RespBeanEnum.LOGIN_ERROR);
         }
         //注册用户
         userMapper.insert(user);
@@ -172,5 +173,21 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
         List<Permission> permissions=permissionMapper.queryPermissionByUserId(loginUser.getUser().getId());
         return RespBean.success(permissions);
+    }
+
+    @Override
+    public RespBean updatePassword(String username, String lastPassword, String newPassword) {
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("username",username);
+        User user = userMapper.selectOne(queryWrapper);
+        if(user==null){
+            return RespBean.error(RespBeanEnum.USER_NOT_ERROR);
+        }
+        if(user.getPassword().equals(passwordEncoder.encode(lastPassword))){
+            return RespBean.error(RespBeanEnum.PASSWORD_ERROR);
+        }
+        user.setPassword(passwordEncoder.encode(newPassword));
+        userMapper.update(user,queryWrapper);
+        return RespBean.success();
     }
 }

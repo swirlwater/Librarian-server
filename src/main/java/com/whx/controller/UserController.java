@@ -157,4 +157,17 @@ public class UserController {
     public RespBean logout(){
         return userService.logout();
     }
+
+    /**
+     * 修改密码
+     * @param username 用户名
+     * @param lastPassword 旧密码
+     * @param newPassword 新密码
+     * @return 信息
+     */
+    @PutMapping("/updatePassword")
+    @ApiOperation("修改密码")
+    public RespBean updatePassword(String username,String lastPassword,String newPassword){
+        return userService.updatePassword(username,lastPassword,newPassword);
+    }
 }

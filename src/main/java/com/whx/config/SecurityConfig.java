@@ -58,6 +58,7 @@ public class SecurityConfig {
                 .antMatchers("/user/login",
                         "/user/captcha",
                         "/user/register",
+                        "/user/updatePassword",
                         "/user/logout",
                         "/css/**",
                         "/js/**",

@@ -17,6 +17,8 @@ public enum RespBeanEnum {
     MOBILE_ERROR(50011,"手机号码格式不正确"),
     CAPTCHA_ERROR(50012,"验证码错误"),
     CAPTCHA_OUT_ERROR(50012,"验证码过期"),
+    USER_NOT_ERROR(50013,"用户不存在"),
+    PASSWORD_ERROR(50014,"密码错误"),
     BOOK_ERROR(50020,"书籍不存在"),
     NUM_ERROR(50021,"库存不足");
     private final Integer code;
