@@ -7,15 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="user register role">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="update password">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/utils/RespBeanEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/utils/RespBeanEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/BorrowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/RoleController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/JetBrains/IDEAProjects/Librarian/src/main/resources/mapper",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/JetBrains/IDEAProjects/springboot",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -303,7 +303,21 @@
       <workItem from="1679990181485" duration="3920000" />
       <workItem from="1679994753314" duration="226000" />
       <workItem from="1680057354548" duration="94000" />
-      <workItem from="1680057561589" duration="1551000" />
+      <workItem from="1680057561589" duration="2450000" />
+      <workItem from="1680074237278" duration="1371000" />
+      <workItem from="1680099833683" duration="8000" />
+      <workItem from="1680100790951" duration="112000" />
+      <workItem from="1680151739819" duration="1171000" />
+      <workItem from="1680191232099" duration="422000" />
+      <workItem from="1680267241152" duration="331000" />
+      <workItem from="1680410443784" duration="1038000" />
+      <workItem from="1680874566833" duration="447000" />
+      <workItem from="1680876473640" duration="12000" />
+      <workItem from="1680878802148" duration="1062000" />
+      <workItem from="1681310389555" duration="372000" />
+      <workItem from="1681906387617" duration="142000" />
+      <workItem from="1681906966128" duration="147000" />
+      <workItem from="1682085640778" duration="5003000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1673619973334</created>
@@ -452,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679927117411</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="update password">
+      <created>1680059678830</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1680059678830</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,7 +552,8 @@
     <MESSAGE value="update borrow and order operation" />
     <MESSAGE value="debug email register" />
     <MESSAGE value="user register role" />
-    <option name="LAST_COMMIT_MESSAGE" value="user register role" />
+    <MESSAGE value="update password" />
+    <option name="LAST_COMMIT_MESSAGE" value="update password" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

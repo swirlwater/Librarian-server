@@ -5,6 +5,7 @@ import com.whx.service.IRoleService;
 import com.whx.utils.RespBean;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class RoleController {
     private IRoleService roleService;
 
     @PostMapping("/add")
+    @PreAuthorize("@ex.hasAuthority('sys:user:roleManage')")
     @ApiOperation("添加角色")
     public RespBean add(Role role, @RequestParam("permissions") String[] permissions) {
         roleService.add(role, permissions);
@@ -33,6 +35,7 @@ public class RoleController {
     }
 
     @DeleteMapping("/delete")
+    @PreAuthorize("@ex.hasAuthority('sys:user:roleManage')")
     @ApiOperation("删除角色")
     public RespBean delete(@RequestParam("ids") Integer[] ids) {
         roleService.delete(ids);
@@ -40,6 +43,7 @@ public class RoleController {
     }
 
     @PutMapping("/update")
+    @PreAuthorize("@ex.hasAuthority('sys:user:userManage')")
     @ApiOperation("修改角色")
     public RespBean update(Role role, @RequestParam("permissions") String[] permissions) {
         roleService.updateRole(role, permissions);
@@ -47,12 +51,14 @@ public class RoleController {
     }
 
     @GetMapping("/query")
+    @PreAuthorize("@ex.hasAuthority('sys:user:userManage')")
     @ApiOperation("查询角色")
     public RespBean query(String name, Integer currentPage) {
         return roleService.queryByName(name, currentPage);
     }
 
     @GetMapping("/queryAll")
+    @PreAuthorize("@ex.hasAuthority('sys:user:userManage')")
     @ApiOperation("查询所有角色")
     public RespBean queryAll() {
         List<Role> roles = roleService.list();

@@ -7,6 +7,7 @@ import com.whx.utils.RespBean;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
@@ -28,6 +29,7 @@ public class BookController {
     private IBookService bookService;
 
     @PostMapping("/add")
+    @PreAuthorize("@ex.hasAuthority('sys:book:bookManage')")
     @ApiOperation("添加图书")
     public RespBean add(@RequestBody Book book){
         bookService.add(book);
@@ -35,6 +37,7 @@ public class BookController {
     }
 
     @DeleteMapping("/delete")
+    @PreAuthorize("@ex.hasAuthority('sys:book:bookManage')")
     @ApiOperation("删除图书")
     public RespBean delete(@RequestParam("ids") Integer[] ids){
         bookService.removeByIds(Arrays.asList(ids));
@@ -42,6 +45,7 @@ public class BookController {
     }
 
     @PutMapping("/update")
+    @PreAuthorize("@ex.hasAuthority('sys:book:bookManage')")
     @ApiOperation("修改图书")
     public RespBean update(@RequestBody Book book){
         bookService.updateById(book);
@@ -49,6 +53,7 @@ public class BookController {
     }
 
     @GetMapping("/query")
+    @PreAuthorize("@ex.hasAuthority('sys:book:bookSearch')")
     @ApiOperation("按条件查询图书")
     public RespBean query(String bookName,String author,Long currentPage){
         return bookService.queryByCondition(bookName,author,currentPage);
