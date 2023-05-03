@@ -32,18 +32,18 @@ public class MyTest {
 
     @Test
     public void sendSimpleMail(){
-        //创建消息对象
-        SimpleMailMessage mailMessage = new SimpleMailMessage();
-        //设置发送人
-        mailMessage.setFrom("1978938887@qq.com");
-        //设置接收人
-        mailMessage.setTo("2565631562@qq.com");
-        //设置邮件标题
-        mailMessage.setSubject("小伙子");
-        //设置内容
-        mailMessage.setText("起床了");
-        //发送邮件
-        javaMailSender.send(mailMessage);
+        ////创建消息对象
+        //SimpleMailMessage mailMessage = new SimpleMailMessage();
+        ////设置发送人
+        //mailMessage.setFrom("1978938887@qq.com");
+        ////设置接收人
+        //mailMessage.setTo("2565631562@qq.com");
+        ////设置邮件标题
+        //mailMessage.setSubject("小伙子");
+        ////设置内容
+        //mailMessage.setText("起床了");
+        ////发送邮件
+        //javaMailSender.send(mailMessage);
     }
 
     @Test

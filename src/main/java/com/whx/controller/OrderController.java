@@ -32,7 +32,7 @@ public class OrderController {
     private IOrderService orderService;
 
     @PostMapping("/add")
-    @PreAuthorize("@ex.hasAuthority('sys:order:orderManage')")
+    @PreAuthorize("@ex.hasAuthority('sys:order:orderAdd')")
     @ApiOperation("添加订单")
     public RespBean add(@RequestBody Order order){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -68,7 +68,7 @@ public class OrderController {
     }
 
     @GetMapping("/queryWithUser")
-    @PreAuthorize("@ex.hasAuthority('sys:order:orderSearch')")
+    @PreAuthorize("@ex.hasAuthority('sys:order:orderAdd')")
     @ApiOperation("用户查询订单")
     public RespBean queryWithUser(String bookName,String author,Long current){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
