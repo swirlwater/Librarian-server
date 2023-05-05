@@ -139,16 +139,6 @@ public class UserController {
     }
 
     /**
-     * 查询用户拥有权限
-     * @return 权限详情列表
-     */
-    @GetMapping("/permissions")
-    @ApiOperation("查询用户拥有权限")
-    public RespBean queryPermissions(){
-        return userService.queryPermissions();
-    }
-
-    /**
      * 退出登录
      * @return 结果
      */

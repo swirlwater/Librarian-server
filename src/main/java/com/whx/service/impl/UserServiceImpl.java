@@ -101,6 +101,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         HashMap<String, Object> map = new HashMap<>();
         map.put("token", jwt);
         map.put("user",loginUser.getUser());
+        List<Permission> permissions=permissionMapper.queryPermissionByUserId(loginUser.getUser().getId());
+        map.put("permissions",permissions);
         redisCache.setCacheObject("login:" + userid, loginUser);
         return RespBean.success(map);
     }
@@ -165,14 +167,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             userRoleVos.add(userRoleVo);
         }
         return RespBean.success(userRoleVos);
-    }
-
-    @Override
-    public RespBean queryPermissions() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        LoginUser loginUser = (LoginUser) authentication.getPrincipal();
-        List<Permission> permissions=permissionMapper.queryPermissionByUserId(loginUser.getUser().getId());
-        return RespBean.success(permissions);
     }
 
     @Override
