@@ -2,6 +2,7 @@ package com.whx.pojo;
 
 import java.io.Serializable;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.whx.validator.IsEmail;
 import com.whx.validator.IsMobile;
@@ -30,7 +31,7 @@ public class User implements Serializable {
     /**
      * 主键id
      */
-    @TableId
+    @TableId(type = IdType.AUTO)
     @ApiModelProperty("用户id")
     private Integer id;
 

@@ -1,13 +1,16 @@
 package com.whx.rabbitmq;
 
+import com.rabbitmq.client.Channel;
 import com.whx.utils.CaptchaUtil;
 import com.whx.utils.RedisCache;
+import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 @Component
@@ -20,7 +23,7 @@ public class MqReceive {
     private RedisCache redisCache;
 
     @RabbitListener(queues = "sendEmail")
-    public void sendEmail(String email){
+    public void sendEmail(String email, Channel channel, Message message) throws IOException {
         //创建消息对象
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         //设置发送人
@@ -37,5 +40,6 @@ public class MqReceive {
         mailMessage.setText("注册的验证码为："+code+"\n如您未获取该验证码，请忽略该信息");
         //发送邮件
         javaMailSender.send(mailMessage);
+        channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
     }
 }

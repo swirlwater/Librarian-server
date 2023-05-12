@@ -1,5 +1,6 @@
 package com.whx.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
@@ -29,7 +30,7 @@ public class Borrow implements Serializable {
     /**
      * 主键id
      */
-    @TableId
+    @TableId(type = IdType.AUTO)
     @ApiModelProperty(value = "id")
     private Integer id;
 
