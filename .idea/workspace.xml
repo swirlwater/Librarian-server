@@ -7,20 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="change getPermissions">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/Borrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/RolePermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/RolePermission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/pojo/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/pojo/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/rabbitmq/MqReceive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/rabbitmq/MqReceive.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +43,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2JoHN1Ik6uthKwCnlIx2XmBV5hG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -73,7 +65,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JetBrains/IDEAProjects/springboot&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JetBrains/IDEAProjects/Librarian/src/main/resources/db/migration&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -83,7 +75,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.144641&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;b3fffe64a853a26fc40957a64e5ca366&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -98,13 +90,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JetBrains\IDEAProjects\Librarian\src\main\resources\db\migration" />
       <recent name="D:\JetBrains\IDEAProjects\Librarian\src\main\resources\mapper" />
       <recent name="D:\JetBrains\IDEAProjects\Librarian\src\main\java\com\whx\pojo" />
       <recent name="D:\JetBrains\IDEAProjects\Librarian\src\main\java\com\whx\mapper" />
       <recent name="D:\JetBrains\IDEAProjects\Librarian\src\main\java\com\whx\service" />
-      <recent name="D:\JetBrains\IDEAProjects\Librarian\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JetBrains\IDEAProjects\Librarian\src\main\resources\sql\db" />
       <recent name="D:\JetBrains\IDEAProjects\Librarian\src\main\resources\mapper" />
       <recent name="D:\JetBrains\IDEAProjects\Librarian\src\main\resources" />
     </key>
@@ -357,6 +350,19 @@
       <workItem from="1683515982231" duration="336000" />
       <workItem from="1683852909044" duration="1595000" />
       <workItem from="1683855485283" duration="1850000" />
+      <workItem from="1683860449658" duration="368000" />
+      <workItem from="1683869694709" duration="835000" />
+      <workItem from="1684243250022" duration="83000" />
+      <workItem from="1684250981239" duration="772000" />
+      <workItem from="1684309745811" duration="1074000" />
+      <workItem from="1684330732438" duration="690000" />
+      <workItem from="1684339837723" duration="57000" />
+      <workItem from="1684339905067" duration="196000" />
+      <workItem from="1684340133362" duration="69000" />
+      <workItem from="1684397523669" duration="821000" />
+      <workItem from="1684413316953" duration="340000" />
+      <workItem from="1684503587227" duration="3552000" />
+      <workItem from="1684507242841" duration="454000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1673619973334</created>
@@ -533,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683305069640</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="为实体自增主键&#10;修复队列消息未确认问题">
+      <created>1683860746742</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1683860746742</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,7 +632,8 @@
     <MESSAGE value="add permissions" />
     <MESSAGE value="debug" />
     <MESSAGE value="change getPermissions" />
-    <option name="LAST_COMMIT_MESSAGE" value="change getPermissions" />
+    <MESSAGE value="为实体自增主键&#10;修复队列消息未确认问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="为实体自增主键&#10;修复队列消息未确认问题" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
