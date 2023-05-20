@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="变更">
+    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="修改项目说明">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -369,6 +369,8 @@
       <workItem from="1684546435013" duration="6707000" />
       <workItem from="1684555591953" duration="101000" />
       <workItem from="1684556999124" duration="561000" />
+      <workItem from="1684557596111" duration="227000" />
+      <workItem from="1684568260809" duration="1691000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1673619973334</created>
@@ -559,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684507778838</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="修改项目说明">
+      <created>1684557701082</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1684557701082</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,7 +630,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reset" />
     <MESSAGE value="authentication exception" />
     <MESSAGE value="register" />
     <MESSAGE value="validate phone" />
@@ -646,7 +654,8 @@
     <MESSAGE value="change getPermissions" />
     <MESSAGE value="为实体自增主键&#10;修复队列消息未确认问题" />
     <MESSAGE value="添加数据库版本管理flyway" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加数据库版本管理flyway" />
+    <MESSAGE value="修改项目说明" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改项目说明" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
