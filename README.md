@@ -12,20 +12,17 @@
 用户管理：管理员修改用户承担的角色。  
 角色管理：管理员修改系统的角色信息，包括对角色信息的增删改查操作。  
 
-## 功能展示
+## 部分功能展示
 书籍搜索  
-![书籍搜索](https://imgse.com/i/p959ut0)  
-借阅记录  
-发起订单  
+[![p959e7n.png](https://s1.ax1x.com/2023/05/20/p959e7n.png)](https://imgse.com/i/p959e7n)
 借阅管理  
-![借阅管理](https://imgse.com/i/p959e7n)  
-订单管理  
+[![p959nkq.png](https://s1.ax1x.com/2023/05/20/p959nkq.png)](https://imgse.com/i/p959nkq)
 书籍管理  
-![书籍管理](https://imgse.com/i/p959nkq)  
+[![p959ut0.png](https://s1.ax1x.com/2023/05/20/p959ut0.png)](https://imgse.com/i/p959ut0)
 用户管理  
-![用户管理](https://imgse.com/i/p959Z0s)  
+[![p959Vmj.png](https://s1.ax1x.com/2023/05/20/p959Vmj.png)](https://imgse.com/i/p959Vmj)
 角色管理  
-![角色管理](https://imgse.com/i/p959Vmj)
+[![p959Z0s.png](https://s1.ax1x.com/2023/05/20/p959Z0s.png)](https://imgse.com/i/p959Z0s)
 
 ## 系统架构
 系统采用Vue+SpringBoot的前后端分离架构开发。系统后台使用的技术有：  
