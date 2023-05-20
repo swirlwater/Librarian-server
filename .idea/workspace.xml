@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="项目项目图床">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="修改部分配置" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -370,6 +368,7 @@
       <workItem from="1684556999124" duration="561000" />
       <workItem from="1684557596111" duration="227000" />
       <workItem from="1684568260809" duration="2532000" />
+      <workItem from="1684572965509" duration="207000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1673619973334</created>
@@ -581,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684570286657</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="修改部分配置">
+      <created>1684573063088</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1684573063088</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +649,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="validate phone" />
     <MESSAGE value="validate email" />
     <MESSAGE value="authority start" />
     <MESSAGE value="role permission" />
@@ -668,7 +673,8 @@
     <MESSAGE value="修改项目说明" />
     <MESSAGE value="修改项目说明图床" />
     <MESSAGE value="项目项目图床" />
-    <option name="LAST_COMMIT_MESSAGE" value="项目项目图床" />
+    <MESSAGE value="修改部分配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改部分配置" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
