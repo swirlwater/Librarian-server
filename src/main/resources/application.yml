@@ -64,3 +64,10 @@ spring:
         acknowledge-mode: manual
     template:
       mandatory: true
+
+oss:
+  qiniu:
+    accessKey: CZbpFhlwS3f1oeBFRGoa5DGKH0X4g3v-4EYa7z3i
+    secretKey: OG8QeGV3FrzP2t81vZgcYbd79Ixpt5hboNBifDfY
+    bucket: whx-librarian
+    expireSeconds: 3600
