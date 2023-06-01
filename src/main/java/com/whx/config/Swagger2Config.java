@@ -51,14 +51,13 @@ public class Swagger2Config {
 
     private List<SecurityContext> securityContexts(){
         ArrayList<SecurityContext> result = new ArrayList<>();
-        result.add(getContextByPath("/hello/.*"));
+        result.add(getContext());
         return result;
     }
 
-    private SecurityContext getContextByPath(String pathRegex) {
+    private SecurityContext getContext() {
         return SecurityContext.builder()
                 .securityReferences(defaultAuth())
-                .forPaths(PathSelectors.regex(pathRegex))
                 .build();
     }
 
