@@ -20,7 +20,8 @@ public enum RespBeanEnum {
     USER_NOT_ERROR(50013,"用户不存在"),
     PASSWORD_ERROR(50014,"密码错误"),
     BOOK_ERROR(50020,"书籍不存在"),
-    NUM_ERROR(50021,"库存不足");
+    NUM_ERROR(50021,"库存不足"),
+    DELETE_FILE_ERROR(50031,"删除文件错误");
     private final Integer code;
     private final String message;
 }

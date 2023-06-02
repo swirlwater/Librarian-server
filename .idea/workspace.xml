@@ -7,7 +7,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="修改部分配置" />
+    <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="修改swagger2配置&#10;解决swagger依赖包导致造成的类型转换异常">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/config/QiniuConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/QiniuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/utils/RespBeanEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/utils/RespBeanEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +87,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.144641&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;spring.boot&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;b3fffe64a853a26fc40957a64e5ca366&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -109,7 +121,17 @@
       <recent name="com.whx.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.LibrarianApplication">
+  <component name="RunManager" selected="JUnit.MyTest.getCode">
+    <configuration name="MyTest.getCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Librarian" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="METHOD_NAME" value="getCode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyTest.passwordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Librarian" />
       <option name="PACKAGE_NAME" value="" />
@@ -130,6 +152,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyTest.testQiniuToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Librarian" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="METHOD_NAME" value="testQiniuToken" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LibrarianApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Librarian" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.whx.LibrarianApplication" />
@@ -145,13 +177,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyTest.getCode" />
         <item itemvalue="Spring Boot.LibrarianApplication" />
+        <item itemvalue="JUnit.MyTest.testQiniuToken" />
         <item itemvalue="JUnit.MyTest.passwordTest" />
         <item itemvalue="JUnit.MyTest.testEmail" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
       <changelist id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="" />
@@ -369,6 +406,16 @@
       <workItem from="1684557596111" duration="227000" />
       <workItem from="1684568260809" duration="2532000" />
       <workItem from="1684572965509" duration="207000" />
+      <workItem from="1685264123072" duration="6714000" />
+      <workItem from="1685286446102" duration="2246000" />
+      <workItem from="1685329940275" duration="2972000" />
+      <workItem from="1685410991456" duration="5941000" />
+      <workItem from="1685448138477" duration="4512000" />
+      <workItem from="1685497612485" duration="3806000" />
+      <workItem from="1685620906458" duration="10464000" />
+      <workItem from="1685669881903" duration="5335000" />
+      <workItem from="1685675805397" duration="542000" />
+      <workItem from="1685682602918" duration="1185000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1673619973334</created>
@@ -587,7 +634,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684573063088</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="修改图床路径">
+      <created>1685424899919</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1685424899919</updated>
+    </task>
+    <task id="LOCAL-00033" summary="修改swagger2配置&#10;解决swagger依赖包导致造成的类型转换异常">
+      <created>1685631348078</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1685631348078</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,8 +710,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="validate email" />
-    <MESSAGE value="authority start" />
     <MESSAGE value="role permission" />
     <MESSAGE value="roleManege" />
     <MESSAGE value="userManage" />
@@ -674,7 +733,9 @@
     <MESSAGE value="修改项目说明图床" />
     <MESSAGE value="项目项目图床" />
     <MESSAGE value="修改部分配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改部分配置" />
+    <MESSAGE value="修改图床路径" />
+    <MESSAGE value="修改swagger2配置&#10;解决swagger依赖包导致造成的类型转换异常" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改swagger2配置&#10;解决swagger依赖包导致造成的类型转换异常" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

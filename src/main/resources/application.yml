@@ -7,11 +7,11 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.2.128:3306/librarian?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://192.168.2.129:3306/librarian?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: wu
     password: 123456
   redis:
-    host: 192.168.2.128
+    host: 192.168.2.129
     port: 6379
   flyway:
     #sql脚本的命名规范为：V+版本号(版本号的数字间以”.“或”_“分隔开)+双下划线(用来分隔版本号和描述)+文件描述+后缀名
@@ -29,8 +29,8 @@ spring:
 
   mail:
     host: smtp.qq.com #配置服务器qq:smtp.qq.com,网易163:smtp.163.com
-    username: xxxx@xx.com #配置公用发件人
-    password: xxxx #配置授权码，邮箱->设置->账户->pop3/SMTP服务：开启后会获得授权码
+    username: xxx@xxx.com #配置公用发件人
+    password: xxx #配置授权码，邮箱->设置->账户->pop3/SMTP服务：开启后会获得授权码
     default-encoding: UTF-8 #配置默认编码
     properties: #一些其他配置
       mail:
@@ -49,7 +49,7 @@ spring:
             port: 465
 
   rabbitmq:
-    host: 192.168.2.128
+    host: 192.168.2.129
     port: 5672
     username: admin
     password: admin
@@ -67,7 +67,8 @@ spring:
 
 oss:
   qiniu:
-    accessKey: CZbpFhlwS3f1oeBFRGoa5DGKH0X4g3v-4EYa7z3i
-    secretKey: OG8QeGV3FrzP2t81vZgcYbd79Ixpt5hboNBifDfY
-    bucket: whx-librarian
-    expireSeconds: 3600
+    accessKey: xxx
+    secretKey: xxx
+    urlPre: xxx
+    expiredSeconds: 3600
+    bucketName: whx-librarian

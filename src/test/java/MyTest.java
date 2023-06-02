@@ -2,10 +2,7 @@ import com.whx.LibrarianApplication;
 import com.whx.utils.CaptchaUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -17,8 +14,8 @@ import java.util.regex.Pattern;
 @RunWith(SpringRunner.class)
 public class MyTest {
 
-    @Autowired
-    private JavaMailSender javaMailSender;
+//    @Autowired
+//    private JavaMailSender javaMailSender;
 
     @Test
     public void passwordTest(){
@@ -32,18 +29,18 @@ public class MyTest {
 
     @Test
     public void sendSimpleMail(){
-        ////创建消息对象
-        //SimpleMailMessage mailMessage = new SimpleMailMessage();
-        ////设置发送人
-        //mailMessage.setFrom("1978938887@qq.com");
-        ////设置接收人
-        //mailMessage.setTo("2565631562@qq.com");
-        ////设置邮件标题
-        //mailMessage.setSubject("小伙子");
-        ////设置内容
-        //mailMessage.setText("起床了");
-        ////发送邮件
-        //javaMailSender.send(mailMessage);
+//        //创建消息对象
+//        SimpleMailMessage mailMessage = new SimpleMailMessage();
+//        //设置发送人
+//        mailMessage.setFrom("1978938887@qq.com");
+//        //设置接收人
+//        mailMessage.setTo("2565631562@qq.com");
+//        //设置邮件标题
+//        mailMessage.setSubject("小伙子");
+//        //设置内容
+//        mailMessage.setText("起床了");
+//        //发送邮件
+//        javaMailSender.send(mailMessage);
     }
 
     @Test
