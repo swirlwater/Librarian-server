@@ -14,15 +14,15 @@
 
 ## 部分功能展示
 书籍搜索  
-![书籍搜索](http://ruyqi5emy.hn-bkt.clouddn.com/librarian/bookSearch.png)
+![书籍搜索](http://wuhaixuan.top/bookSearch.png)
 借阅管理  
-![借阅管理](http://ruyqi5emy.hn-bkt.clouddn.com/librarian/borrowManage.png)
+![借阅管理](http://wuhaixuan.top/borrowManage.png)
 书籍管理  
-![书籍管理](http://ruyqi5emy.hn-bkt.clouddn.com/librarian/bookManage.png)
+![书籍管理](http://wuhaixuan.top/bookManage.png)
 用户管理  
-![用户管理](http://ruyqi5emy.hn-bkt.clouddn.com/librarian/userManage.png)
+![用户管理](http://wuhaixuan.top/userManage.png)
 角色管理  
-![角色管理](http://ruyqi5emy.hn-bkt.clouddn.com/librarian/roleManage.png)
+![角色管理](http://wuhaixuan.top/roleManage.png)
 
 ## 系统架构
 系统采用Vue+SpringBoot的前后端分离架构开发。系统后台使用的技术有：  
