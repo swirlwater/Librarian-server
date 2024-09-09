@@ -3,7 +3,7 @@ mybatis-plus:
   type-aliases-package: pojo
 
 server:
-  port: 8080
+  port: 8081
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver

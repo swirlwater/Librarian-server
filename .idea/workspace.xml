@@ -8,15 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="修改swagger2配置&#10;解决swagger依赖包导致造成的类型转换异常">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/config/QiniuConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/QiniuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d47348a8-042c-4d18-8aac-0a3637c6b052.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/utils/RespBeanEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/utils/RespBeanEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whx/utils/FastJsonRedisSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whx/utils/FastJsonRedisSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
     </list>
@@ -44,13 +39,14 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="a7c012e4-56ee-4086-9de9-bcda5573e414" />
-        <option name="url" value="https://github.com/whx1978938887/Librarian.git" />
-      </UrlAndAccount>
-    </option>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/swirlwater/Librarian-server.git",
+    "accountId": "4154e631-377f-424f-a463-50ffd0251eb7"
+  }
+}]]></component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -58,6 +54,10 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2JoHN1Ik6uthKwCnlIx2XmBV5hG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -73,11 +73,16 @@
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.LibrarianApplication.executor&quot;: &quot;Run&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JetBrains/IDEAProjects/Librarian/src/main/resources/db/migration&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/wu/IdeaProjects/Librarian-server&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -121,7 +126,7 @@
       <recent name="com.whx.config" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest.getCode">
+  <component name="RunManager" selected="Spring Boot.LibrarianApplication">
     <configuration name="MyTest.getCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Librarian" />
       <option name="PACKAGE_NAME" value="" />
@@ -163,7 +168,7 @@
       </method>
     </configuration>
     <configuration name="LibrarianApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="Librarian" />
+      <module name="Librarian-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.whx.LibrarianApplication" />
       <extension name="coverage">
         <pattern>
@@ -177,8 +182,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MyTest.getCode" />
         <item itemvalue="Spring Boot.LibrarianApplication" />
+        <item itemvalue="JUnit.MyTest.getCode" />
         <item itemvalue="JUnit.MyTest.testQiniuToken" />
         <item itemvalue="JUnit.MyTest.passwordTest" />
         <item itemvalue="JUnit.MyTest.testEmail" />
@@ -186,9 +191,6 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
-  <component name="SpringBootOptions">
-    <option name="showAdditionalConfigNotification" value="false" />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
       <changelist id="a13d84ab-7dd4-4677-8336-28a579750aab" name="变更" comment="" />
@@ -416,6 +418,19 @@
       <workItem from="1685669881903" duration="5335000" />
       <workItem from="1685675805397" duration="542000" />
       <workItem from="1685682602918" duration="1185000" />
+      <workItem from="1718551061283" duration="534000" />
+      <workItem from="1718551627471" duration="988000" />
+      <workItem from="1718552927229" duration="158000" />
+      <workItem from="1718553114673" duration="746000" />
+      <workItem from="1718554202584" duration="248000" />
+      <workItem from="1718590753538" duration="67000" />
+      <workItem from="1718591390091" duration="116000" />
+      <workItem from="1718593249976" duration="524000" />
+      <workItem from="1719125891824" duration="282000" />
+      <workItem from="1719128777593" duration="1128000" />
+      <workItem from="1719556805755" duration="111000" />
+      <workItem from="1719557400467" duration="303000" />
+      <workItem from="1722652799223" duration="134000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1673619973334</created>
@@ -736,6 +751,10 @@
     <MESSAGE value="修改图床路径" />
     <MESSAGE value="修改swagger2配置&#10;解决swagger依赖包导致造成的类型转换异常" />
     <option name="LAST_COMMIT_MESSAGE" value="修改swagger2配置&#10;解决swagger依赖包导致造成的类型转换异常" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
